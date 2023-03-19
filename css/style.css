@@ -21,7 +21,7 @@ html {
 }
 
 body {
-  background: fixed url("../img/ressources/assets/background/lone-blue.jpg");
+  background: fixed url("../img/ressources/assets/background/matte-black.jpg");
   background-size: cover;
 }
 
@@ -200,4 +200,31 @@ section {
 .projects .projects-list .projects-list-element:nth-child(6n+5) .projects-link::before {
   background-color: #fff;
   background-image: linear-gradient(180deg, #fff 0%, #6284ff 50% #ff0000 100%);
+}
+
+.about {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fefbf8;
+}
+.about p,
+.about h2,
+.about h3,
+.about a {
+  color: #000;
+}
+.about .about-perso-container .about-pic {
+  float: left;
+  box-sizing: content-box;
+  padding: 2rem;
+  background: url("../img/ressources/assets/background/lone-blue.jpg") fixed;
+  border-radius: 50%;
+  position: relative;
+  top: -10px;
+  background-size: 100vw 100vh;
+  background-position: center;
 }/*# sourceMappingURL=style.css.map */

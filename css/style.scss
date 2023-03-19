@@ -26,7 +26,7 @@ html {
 }
 
 body {
-  background: fixed url("../img/ressources/assets/background/lone-blue.jpg");
+  background: fixed url("../img/ressources/assets/background/matte-black.jpg");
   background-size: cover;
 }
 
@@ -223,6 +223,37 @@ section {
           #6284ff 50% #ff0000 100%
         );
       }
+    }
+  }
+}
+
+// --------------------------
+
+.about {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: $main-text-color;
+  p,
+  h2,
+  h3,
+  a {
+    color: #000;
+  }
+  .about-perso-container {
+    .about-pic {
+      float: left;
+      box-sizing: content-box;
+      padding: 2rem;
+      background: url("../img/ressources/assets/background/lone-blue.jpg") fixed;
+      border-radius: 50%;
+      position: relative;
+      top: -10px;
+      background-size: 100vw 100vh;
+      background-position: center;
     }
   }
 }
