@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap");
+
+:root {
+    font-size: 1.5rem;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    height: 90%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Sora', Verdana, Geneva, Tahoma, sans-serif;
+    min-width: 320px;
+}
+
+h1, p {
+    margin: 0;
+}
+
+img {
+    margin-top: 2rem;
+    width: 30vw;
+    max-width: 250px;
+}
