@@ -22,8 +22,8 @@ nav {
             flex-direction: column;
             gap: 0.5rem;
             position: relative;
-            box-shadow: 0 0 0 0 $sec-color, 0 0 0 0 $sec-color;
 
+            // Sert pour agrandir le hover
             &::before {
                 content: "";
                 width: 5rem;
@@ -32,6 +32,18 @@ nav {
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                width: 0;
+                height: 0;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                border-radius: 100%;
+                background-color: $sec-color;
+                transition: width 0.5s ease-out, height 0.5s ease-out;
             }
 
             span:not(.burger-background) {
@@ -71,12 +83,9 @@ nav {
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                box-shadow: 0 0 0 0px $sec-color, 0 0 0 0px $sec-color;
-                transition: 0.2s ease-in box-shadow, width 0.2s ease-out,
-                    height 0.2s ease-out;
             }
             &:hover > .burger-background {
-                animation: 0.5s ease-in burger-background-bounce;
+                animation: 0.4s ease-in burger-background-bounce;
                 width: 6rem;
                 height: 6rem;
             }
@@ -151,13 +160,18 @@ nav {
                     top: 0;
                 }
             }
-            .burger-background {
-                box-shadow: 0 0 0 100vw $sec-color, 0 0 0 100vw $sec-color;
+            .burger-toggle::after {
+                width: 250vw;
+                height: 250vw;
                 transition-duration: 0.5s;
             }
+            // .burger-background {
+            //     box-shadow: 0 0 0 100vw $sec-color, 0 0 0 100vw $sec-color;
+            //     transition-duration: 0.5s;
+            // }
             .burger-menu {
                 opacity: 1;
-                transition-delay: 0.3s;
+                transition-delay: 0.1s;
             }
         }
     }
@@ -168,7 +182,7 @@ nav {
         width: 0;
         height: 0;
     }
-    60% {
+    40% {
         width: 7.5rem;
         height: 7.5rem;
     }
