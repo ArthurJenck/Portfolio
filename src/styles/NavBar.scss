@@ -4,7 +4,7 @@ nav {
     position: fixed;
     z-index: 5;
     top: 2rem;
-    left: 4rem;
+    left: 4vw;
     right: 4vw;
     display: flex;
     justify-content: space-between;
@@ -12,6 +12,7 @@ nav {
 
     .logo-link img {
         height: 11.5svh;
+        transition: opacity 0.2s;
     }
 
     .burger {
@@ -23,7 +24,7 @@ nav {
             gap: 0.5rem;
             position: relative;
 
-            // Sert pour agrandir le hover
+            // Sert pour agrandir la zone de hover
             &::before {
                 content: "";
                 width: 5rem;
@@ -101,7 +102,7 @@ nav {
             justify-content: center;
             align-items: center;
             opacity: 0;
-            transition: opacity 0.2s;
+            transition: opacity 0.2s ease-out;
 
             img[alt="logo"] {
                 height: 10rem;
@@ -161,18 +162,30 @@ nav {
                 }
             }
             .burger-toggle::after {
-                width: 250vw;
-                height: 250vw;
+                width: 400vw;
+                height: 400vw;
                 transition-duration: 0.5s;
             }
-            // .burger-background {
-            //     box-shadow: 0 0 0 100vw $sec-color, 0 0 0 100vw $sec-color;
-            //     transition-duration: 0.5s;
-            // }
             .burger-menu {
                 opacity: 1;
-                transition-delay: 0.1s;
+                transition-duration: 0.2s;
             }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav .burger {
+        &.open .burger-toggle {
+            &::after {
+                width: 400vh;
+                height: 400vh;
+            }
+        }
+        .burger-toggle:hover > .burger-background {
+            animation: 0;
+            width: 0;
+            height: 0;
         }
     }
 }

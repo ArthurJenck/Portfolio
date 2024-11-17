@@ -5,6 +5,21 @@ import ImgLink from "./ImgLink"
 const NavBar = () => {
     const [isOpen, setIsOpen] = useState(false)
 
+    window.matchMedia("(max-width: 768px)").matches
+        ? (window.onscroll = () => {
+              const navLogoOpacity = document.querySelector(".logo-link")!
+              scrollY !== 0
+                  ? navLogoOpacity.setAttribute(
+                        "style",
+                        "opacity:0; transition: opacity 0.2s"
+                    )
+                  : navLogoOpacity.setAttribute(
+                        "style",
+                        "opacity:1; transition: opacity 0.2s"
+                    )
+          })
+        : null
+
     return (
         <nav>
             <ImgLink for="logo" />
