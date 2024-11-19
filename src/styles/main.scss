@@ -1,21 +1,16 @@
-@import url("https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap");
-
-$main-color: #110f1e;
-$sec-color: #2c253e;
-$accent-color: #714e97;
-$whitey: #fdfdfe;
-$default-font: "Sora", Helvetica, sans-serif;
+@use "../styles/variables/fonts";
+@use "../styles/variables/colors";
 
 html,
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: $default-font;
+    font-family: fonts.$default;
 }
 
 body {
-    background-color: $main-color;
+    background-color: colors.$main;
 }
 
 img {
@@ -24,5 +19,5 @@ img {
 
 html,
 * {
-    color: $whitey;
+    color: colors.$white;
 }
