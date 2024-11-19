@@ -1,50 +1,56 @@
-# React + TypeScript + Vite
+<p align="center">
+  <img src="https://i.ibb.co/grKRmmn/Logo-Jaune-PNG.png" width="75">
+</p>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<h3 align="center"><a href="https://arthurjenck.com/">arthurjenck.com</a></h3>
 
-Currently, two official plugins are available:
+# Portfolio personnel
+## Réalisé dans le cadre du projet n°8 du parcours Développeur Web d'OpenClassrooms  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Outils utilisés
+Carnet pour noter mes différentes idées et dessiner le wireframe  
+Figma pour la création de la maquette du projet  
+Codé en React Typescript, préprocessé en SCSS   
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### Installation
+Utilisez votre gestionnaire de projets préféré pour installer les dépendances :  
+#### NPM :
+```sh
+> npm i
+```
+#### Yarn :
+```sh
+> yarn
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+Puis lancez le projet avec :  
+#### NPM :
+```sh
+> npm run dev
 ```
+#### Yarn :
+```sh
+> yarn vite
+```
+
+### Futurs ajouts
+Mode clair / sombre  
+Version ENG / FR
+
+### Liens utiles
+Maquette Figma du projet : [figma.com/design/](https://www.figma.com/design/JuFHi8HzvScTfFTQWZJnov/Portfolio-2.0)  
+Lien Google Drive contenant les scans de mon carnet : [drive.google.com/drive/folders/](https://drive.google.com/drive/folders/1f4fpOMN-B1Bi42T_U0PUSnKu0sPL1yy7?usp=sharing)
+
+### Dates du projet
+
+Premières réflexions en 2023  
+Début du design de la maquette le 30 octobre 2024
+Début du eéveloppement le 15 novembre 2024
+
+### Auteur
+
+Arthur Jenck  
+https://arthurjenck.com/  
+https://www.linkedin.com/in/arthurjenck/
+
+<img src="https://i.ibb.co/grKRmmn/Logo-Jaune-PNG.png" width="75">
