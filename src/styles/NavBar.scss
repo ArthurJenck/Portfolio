@@ -44,7 +44,7 @@ nav {
                 transform: translate(-50%, -50%);
                 border-radius: 100%;
                 background-color: colors.$secondary;
-                transition: width 0.5s ease-out, height 0.5s ease-out;
+                transition: width 0.2s ease-out, height 0.2s ease-out;
             }
 
             span:not(.burger-background) {
@@ -55,7 +55,7 @@ nav {
                 height: 5px;
                 display: block;
                 border-radius: 100vw;
-                transition: transform 0.5s ease-in-out;
+                transition: transform 0.2s ease-in-out;
                 &::before,
                 &::after {
                     content: "";
@@ -84,6 +84,7 @@ nav {
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
+                transition: width 0.2s ease-out, height 0.2s ease-out;
             }
             &:hover > .burger-background {
                 animation: 0.4s ease-in burger-background-bounce;
@@ -96,13 +97,14 @@ nav {
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            z-index: 6;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            visibility: hidden;
             opacity: 0;
-            transition: opacity 0.2s ease-out;
+            z-index: 6;
+            animation: 0.2s burger-opacity-off forwards;
 
             img[alt="logo"] {
                 height: 10rem;
@@ -168,7 +170,8 @@ nav {
             }
             .burger-menu {
                 opacity: 1;
-                transition-duration: 0.2s;
+                visibility: visible;
+                transition: visibility 0.2s ease-out, opacity 0.2s ease-out;
             }
         }
     }

@@ -7,17 +7,10 @@ html,
     margin: 0;
     padding: 0;
     font-family: fonts.$default;
+    color: colors.$white;
+    scroll-behavior: smooth;
 }
 
 body {
     background-color: colors.$main;
-}
-
-img {
-    height: 300px;
-}
-
-html,
-* {
-    color: colors.$white;
 }

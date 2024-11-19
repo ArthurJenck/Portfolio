@@ -1,0 +1,160 @@
+@use "../styles/variables/colors";
+
+:root {
+    --h1-weight: 700;
+}
+$h1-weight: --h1-weight;
+
+header {
+    height: 100svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    scroll-behavior: smooth;
+    h1 {
+        max-width: 50vw;
+        text-align: center;
+        font-size: 11.5vw;
+        line-height: 90%;
+        letter-spacing: 2px;
+        font-variation-settings: "wght" var($h1-weight, 800);
+
+        opacity: 0;
+        animation: appear 0.2s ease-out forwards 0.1s;
+
+        span {
+            max-width: fit-content;
+            width: fit-content;
+            display: block;
+            margin: 0 auto;
+            padding: 0;
+            height: fit-content;
+            font-size: 1.5vw;
+            letter-spacing: normal;
+            line-height: normal;
+
+            opacity: 0;
+            animation: appear 0.2s ease-out 0.2s forwards,
+                typing-cursor 1s step-end infinite;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: solid colors.$white 0.15rem;
+        }
+    }
+    .socials {
+        display: flex;
+        gap: 1.5vw;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1.5vw;
+
+        opacity: 0;
+        animation: appear 0.2s ease-out 0.3s forwards;
+        a {
+            img {
+                width: 3.5vw;
+                aspect-ratio: 1/1;
+            }
+        }
+    }
+    .chevron {
+        width: 1.5vw;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+
+        bottom: 0;
+        opacity: 0;
+        animation: appear 0.5s 0.4s forwards,
+            floating-chevron 1.5s ease-in-out infinite 0.9s;
+        cursor: pointer;
+    }
+    .video-bg {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        object-fit: cover;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        filter: brightness(40%);
+    }
+
+    @media screen and (max-width: 768px) {
+        h1 {
+            font-size: 23vw;
+            max-width: 100%;
+            font-variation-settings: "wght" 700;
+            span {
+                font-size: 3.5vw;
+            }
+        }
+        .socials {
+            margin-top: 1.5rem;
+            gap: 1.5rem;
+            a img {
+                width: 4rem;
+            }
+        }
+        .chevron {
+            width: 2rem;
+            animation: appear-chevron-mobile 0.5s 0.4s forwards,
+                floating-chevron-mobile 1.5s ease-in-out infinite 0.9s;
+        }
+    }
+}
+
+@keyframes appear {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+    to {
+        bottom: 2.5vw;
+        opacity: 1;
+    }
+}
+
+@keyframes typing-cursor {
+    from,
+    to {
+        border-color: transparent;
+    }
+
+    50% {
+        border-color: colors.$white;
+    }
+}
+
+@keyframes floating-chevron {
+    from,
+    to {
+        bottom: 2.5vw;
+    }
+
+    50% {
+        bottom: 2vw;
+    }
+}
+
+@keyframes appear-chevron-mobile {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+    to {
+        bottom: 2.5rem;
+        opacity: 1;
+    }
+}
+
+@keyframes floating-chevron-mobile {
+    from,
+    to {
+        bottom: 2.5rem;
+    }
+    50% {
+        bottom: 1.5rem;
+    }
+}
