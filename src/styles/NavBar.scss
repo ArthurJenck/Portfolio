@@ -174,21 +174,18 @@ nav {
                 transition: visibility 0.2s ease-out, opacity 0.2s ease-out;
             }
         }
-    }
-}
-
-@media screen and (max-width: 768px) {
-    nav .burger {
-        &.open .burger-toggle {
-            &::after {
-                width: 400vh;
-                height: 400vh;
+        @media screen and (max-width: 1024px) {
+            &.open .burger-toggle {
+                &::after {
+                    width: 400vh;
+                    height: 400vh;
+                }
             }
-        }
-        .burger-toggle:hover > .burger-background {
-            animation: 0;
-            width: 0;
-            height: 0;
+            .burger-toggle:hover > .burger-background {
+                animation: 0;
+                width: 0;
+                height: 0;
+            }
         }
     }
 }

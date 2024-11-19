@@ -1,7 +1,7 @@
 @use "../styles/variables/colors";
 
 :root {
-    --h1-weight: 700;
+    --h1-weight: 100;
 }
 $h1-weight: --h1-weight;
 
@@ -81,7 +81,7 @@ header {
         filter: brightness(40%);
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1024px) {
         h1 {
             font-size: 23vw;
             max-width: 100%;

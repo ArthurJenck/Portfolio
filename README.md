@@ -5,39 +5,52 @@
 <h3 align="center"><a href="https://arthurjenck.com/">arthurjenck.com</a></h3>
 
 # Portfolio personnel
-## Réalisé dans le cadre du projet n°8 du parcours Développeur Web d'OpenClassrooms  
+
+## Réalisé dans le cadre du projet n°8 du parcours Développeur Web d'OpenClassrooms
 
 ### Outils utilisés
+
 Carnet pour noter mes différentes idées et dessiner le wireframe  
 Figma pour la création de la maquette du projet  
-Codé en React Typescript, préprocessé en SCSS   
+Codé en React Typescript, préprocessé en SCSS
 
 ### Installation
-Utilisez votre gestionnaire de projets préféré pour installer les dépendances :  
+
+Utilisez votre gestionnaire de projets préféré pour installer les dépendances :
+
 #### NPM :
+
 ```sh
 > npm i
 ```
+
 #### Yarn :
+
 ```sh
 > yarn
 ```
 
-Puis lancez le projet avec :  
+Puis lancez le projet avec :
+
 #### NPM :
+
 ```sh
 > npm run dev
 ```
+
 #### Yarn :
+
 ```sh
 > yarn vite
 ```
 
 ### Futurs ajouts
+
 Mode clair / sombre  
 Version ENG / FR
 
 ### Liens utiles
+
 Maquette Figma du projet : [figma.com/design/](https://www.figma.com/design/JuFHi8HzvScTfFTQWZJnov/Portfolio-2.0)  
 Lien Google Drive contenant les scans de mon carnet : [drive.google.com/drive/folders/](https://drive.google.com/drive/folders/1f4fpOMN-B1Bi42T_U0PUSnKu0sPL1yy7?usp=sharing)
 
