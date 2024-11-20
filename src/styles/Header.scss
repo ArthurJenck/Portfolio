@@ -4,6 +4,7 @@
     --h1-weight: 100;
 }
 $h1-weight: --h1-weight;
+$base-appear-delay: 0.8s;
 
 header {
     height: 100svh;
@@ -21,7 +22,7 @@ header {
         font-variation-settings: "wght" var($h1-weight, 800);
 
         opacity: 0;
-        animation: appear 0.2s ease-out forwards 0.1s;
+        animation: appear 0.3s ease-out forwards $base-appear-delay;
 
         span {
             max-width: fit-content;
@@ -35,7 +36,8 @@ header {
             line-height: normal;
 
             opacity: 0;
-            animation: appear 0.2s ease-out 0.2s forwards,
+            animation: appear 0.3s ease-out calc($base-appear-delay + 0.15s)
+                    forwards,
                 typing-cursor 1s step-end infinite;
             overflow: hidden;
             white-space: nowrap;
@@ -50,7 +52,7 @@ header {
         margin-top: 1.5vw;
 
         opacity: 0;
-        animation: appear 0.2s ease-out 0.3s forwards;
+        animation: appear 0.3s ease-out calc($base-appear-delay + 0.3s) forwards;
         a {
             img {
                 width: 3.5vw;
@@ -66,7 +68,7 @@ header {
 
         bottom: 0;
         opacity: 0;
-        animation: appear 0.5s 0.4s forwards,
+        animation: appear 0.5s calc($base-appear-delay + 0.45s) forwards,
             floating-chevron 1.5s ease-in-out infinite 0.9s;
         cursor: pointer;
     }
