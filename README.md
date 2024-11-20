@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://i.ibb.co/grKRmmn/Logo-Jaune-PNG.png" width="75">
+  <img src="https://i.ibb.co/R4tzqky/logo.png" width="75">
 </p>
 
 <h3 align="center"><a href="https://arthurjenck.com/">arthurjenck.com</a></h3>
@@ -66,4 +66,4 @@ Arthur Jenck
 https://arthurjenck.com/  
 https://www.linkedin.com/in/arthurjenck/
 
-<img src="https://i.ibb.co/grKRmmn/Logo-Jaune-PNG.png" width="75">
+<img src="https://i.ibb.co/R4tzqky/logo.png" width="75">
