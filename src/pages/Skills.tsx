@@ -1,5 +1,5 @@
 import SkillType from "../components/SkillType"
-import skillsArr from "../data/skills.json"
+import skillsArr from "../data/skills.ts"
 
 const Skills = () => {
     const categs = [...new Set(skillsArr.map((skill) => skill.categ))]

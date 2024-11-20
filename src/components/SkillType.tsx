@@ -1,4 +1,4 @@
-import skillsArr from "../data/skills.json"
+import skillsArr from "../data/skills.ts"
 import SkillDiv from "./SkillDiv"
 
 interface SkillTypeProps {
