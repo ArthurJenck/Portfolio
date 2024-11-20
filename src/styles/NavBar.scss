@@ -12,4 +12,8 @@ nav {
         height: 11.5svh;
         transition: opacity 0.2s;
     }
+
+    @media screen and (max-width: 1024px) {
+        height: 4rem;
+    }
 }

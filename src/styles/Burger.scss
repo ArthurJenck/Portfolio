@@ -161,16 +161,29 @@
         }
     }
     @media screen and (max-width: 1024px) {
+        .burger-toggle {
+            span:not(.burger-background) {
+                width: 25px;
+                height: 3px;
+                &::before {
+                    top: -8px;
+                }
+                &::after {
+                    top: 8px;
+                }
+            }
+            &:hover > .burger-background {
+                animation: 0;
+                width: 0;
+                height: 0;
+            }
+        }
+
         &.open .burger-toggle {
             &::after {
                 width: 400vh;
                 height: 400vh;
             }
-        }
-        .burger-toggle:hover > .burger-background {
-            animation: 0;
-            width: 0;
-            height: 0;
         }
     }
 }
