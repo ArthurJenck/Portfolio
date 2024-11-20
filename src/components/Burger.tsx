@@ -30,12 +30,12 @@ const Burger = () => {
                         </a>
                     </li>
                     <li>
-                        <a href="about" onClick={() => setIsOpen(!isOpen)}>
+                        <a href="#about" onClick={() => setIsOpen(!isOpen)}>
                             À propos
                         </a>
                     </li>
                     <li>
-                        <a href="contact" onClick={() => setIsOpen(!isOpen)}>
+                        <a href="#contact" onClick={() => setIsOpen(!isOpen)}>
                             Contact
                         </a>
                     </li>
