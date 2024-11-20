@@ -1,4 +1,5 @@
-import BG_Vid from "../assets/videos/Portfolio BG.webm"
+import BG_Vid from "../assets/videos/portfolio-bg.webm"
+import BG_Mobile from "../assets/images/placeholder_header.png"
 import ImgLink from "../components/ImgLink"
 import Chevron from "../assets/icons/chevron.svg"
 import { useScroll } from "../hooks"
@@ -27,9 +28,10 @@ const Header = () => {
                 <ImgLink for="cv" />
             </div>
             <img src={Chevron} alt="Passer à la suite" className="chevron" />
-            <video className="video-bg" autoPlay muted loop>
+            <video className="hero-bg" autoPlay muted loop>
                 <source src={BG_Vid} type="video/webm" />
             </video>
+            <img src={BG_Mobile} alt="Image de fond" className="hero-bg" />
         </header>
     )
 }
