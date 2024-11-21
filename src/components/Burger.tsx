@@ -15,7 +15,7 @@ const Burger = () => {
                 <ImgLink for="logo" />
                 <ul>
                     <li>
-                        <a href="/" onClick={() => setIsOpen(!isOpen)}>
+                        <a href="#" onClick={() => setIsOpen(!isOpen)}>
                             Accueil
                         </a>
                     </li>

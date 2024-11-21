@@ -36,7 +36,7 @@ header {
             line-height: normal;
 
             opacity: 0;
-            animation: appear 0.3s ease-out calc($base-appear-delay + 0.15s)
+            animation: appear 0.3s ease-out calc($base-appear-delay + 0.2s)
                     forwards,
                 typing-cursor 1s step-end infinite;
             overflow: hidden;
@@ -52,7 +52,7 @@ header {
         margin-top: 1.5vw;
 
         opacity: 0;
-        animation: appear 0.3s ease-out calc($base-appear-delay + 0.3s) forwards;
+        animation: appear 0.3s ease-out calc($base-appear-delay + 0.4s) forwards;
         a {
             img {
                 width: 3.5vw;
@@ -68,7 +68,7 @@ header {
 
         bottom: 0;
         opacity: 0;
-        animation: appear 0.5s calc($base-appear-delay + 0.45s) forwards,
+        animation: appear 0.5s calc($base-appear-delay + 0.6s) forwards,
             floating-chevron 1.5s ease-in-out infinite 0.9s;
         cursor: pointer;
     }
@@ -80,13 +80,7 @@ header {
         top: 0;
         left: 0;
         z-index: -1;
-        filter: brightness(40%);
-    }
-    video.hero-bg {
-        display: block;
-    }
-    img.hero-bg {
-        display: none;
+        filter: brightness(30%);
     }
 
     @media screen and (max-width: 1024px) {
@@ -107,14 +101,9 @@ header {
         }
         .chevron {
             width: 2rem;
-            animation: appear-chevron-mobile 0.5s 0.4s forwards,
+            animation: appear-chevron-mobile 0.5s
+                    calc($base-appear-delay + 0.6s) forwards,
                 floating-chevron-mobile 1.5s ease-in-out infinite 0.9s;
-        }
-        video.hero-bg {
-            display: none;
-        }
-        img.hero-bg {
-            display: block;
         }
     }
 }
