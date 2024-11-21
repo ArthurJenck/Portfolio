@@ -1,0 +1,24 @@
+.skill-div {
+    display: flex;
+    gap: 2.5vw;
+    align-items: center;
+    img {
+        width: 5vw;
+        height: 5vw;
+    }
+    p {
+        font-size: 1.25vw;
+    }
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+        img {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+        p {
+            font-size: 1rem;
+        }
+    }
+}

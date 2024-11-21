@@ -12,6 +12,7 @@
     opacity: 0;
     visibility: hidden;
     transition: visibility 0.2s, opacity 0.5s ease-out;
+    z-index: 4;
 
     li {
         position: relative;
@@ -95,5 +96,8 @@
         &:last-of-type::after {
             display: none;
         }
+    }
+    @media screen and (max-width: 768px) {
+        display: none;
     }
 }

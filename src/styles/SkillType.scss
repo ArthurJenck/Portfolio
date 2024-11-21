@@ -1,0 +1,38 @@
+.skill-type {
+    width: fit-content;
+    position: relative;
+    left: 15vw;
+    top: 0;
+    margin-top: 25svh;
+    h3 {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 50%;
+        font-size: 2.5vw;
+        float: left;
+        text-align: right;
+        letter-spacing: 2px;
+        min-width: 120px;
+    }
+    ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        top: 0;
+        max-width: 55vw;
+        padding-left: 3vw;
+    }
+
+    @media screen and (max-width: 768px) {
+        margin-top: 5svh;
+        left: 5.5vw;
+        h3 {
+            font-size: 1.2rem;
+        }
+        ul {
+            gap: 1rem;
+            max-width: 50vw;
+        }
+    }
+}

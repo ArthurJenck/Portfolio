@@ -1,5 +1,22 @@
 #skills {
-    width: 55vw;
+    margin: 4rem 0;
     position: relative;
-    left: 15vw;
+    h2 {
+        font-size: 5vw;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 0;
+        width: fit-content;
+        letter-spacing: 2px;
+    }
+
+    @media screen and (max-width: 768px) {
+        margin: 2rem 0;
+        h2 {
+            left: 5.5vw;
+            font-size: 7vw;
+            transform: none;
+        }
+    }
 }

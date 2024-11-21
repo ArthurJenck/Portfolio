@@ -1,5 +1,6 @@
 import skillsArr from "../data/skills.ts"
 import SkillDiv from "./SkillDiv"
+import "../styles/SkillType.scss"
 
 interface SkillTypeProps {
     categ: string
