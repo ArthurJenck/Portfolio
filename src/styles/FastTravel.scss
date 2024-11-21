@@ -9,7 +9,10 @@
     display: flex;
     flex-direction: column;
     gap: 2vw;
-    transition: opacity 0.2s ease-out;
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility 0.2s, opacity 0.5s ease-out;
+
     li {
         position: relative;
         a {
@@ -33,6 +36,24 @@
             &:hover::before {
                 clip-path: polygon(100% 0, 0 100%, 100% 100%);
             }
+            &.current::before {
+                clip-path: polygon(100% 0, 0 100%, 100% 100%);
+            }
+            &::after {
+                content: "";
+                width: 2.5vw;
+                aspect-ratio: 1/1;
+                background-color: colors.$white;
+                position: absolute;
+                border-radius: 100%;
+                left: 0;
+                top: 0;
+                clip-path: polygon(0 0, 0 0, 0 0);
+                transition: clip-path 0.2s ease-out;
+            }
+            &.current::after {
+                clip-path: polygon(0 0, 0% 105%, 105% 0);
+            }
         }
         &::before {
             content: "Accueil";
@@ -45,6 +66,7 @@
             opacity: 0;
             right: 1vw;
             transition: right 0.2s ease-out, opacity 0.2s ease-out;
+            pointer-events: none;
         }
         &:nth-of-type(2)::before {
             content: "Compétences";

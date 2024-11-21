@@ -3,10 +3,9 @@ import linkedinIcon from "../assets/icons/linkedin-icon.svg"
 import githubIcon from "../assets/icons/github-icon.svg"
 import cvIcon from "../assets/icons/cv-icon.svg"
 import "../styles/ImgLink.scss"
-import { useScroll } from "../hooks"
 
 const ImgLink = (props: { for: string }) => {
-    let link = ""
+    let link = "#"
     let icon = Logo
     let alt = "logo"
     switch (props.for) {
@@ -32,7 +31,6 @@ const ImgLink = (props: { for: string }) => {
 
     return (
         <a
-            onClick={() => useScroll(0)}
             href={link}
             className={props.for === "logo" ? "logo-link" : "socials-link"}
             target={props.for === "logo" ? "" : "_blank"}

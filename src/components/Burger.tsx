@@ -11,36 +11,26 @@ const Burger = () => {
                 <span></span>
                 <span className="burger-background"></span>
             </div>{" "}
-            <div className="burger-menu">
+            <div className="burger-menu" onClick={() => setIsOpen(!isOpen)}>
                 <ImgLink for="logo" />
                 <ul>
                     <li>
-                        <a href="#" onClick={() => setIsOpen(!isOpen)}>
-                            Accueil
-                        </a>
+                        <a href="#">Accueil</a>
                     </li>
                     <li>
-                        <a href="#skills" onClick={() => setIsOpen(!isOpen)}>
-                            Compétences
-                        </a>
+                        <a href="#skills">Compétences</a>
                     </li>
                     <li>
-                        <a href="#projets" onClick={() => setIsOpen(!isOpen)}>
-                            Projets
-                        </a>
+                        <a href="#projets">Projets</a>
                     </li>
                     <li>
-                        <a href="#about" onClick={() => setIsOpen(!isOpen)}>
-                            À propos
-                        </a>
+                        <a href="#about">À propos</a>
                     </li>
                     <li>
-                        <a href="#contact" onClick={() => setIsOpen(!isOpen)}>
-                            Contact
-                        </a>
+                        <a href="#contact">Contact</a>
                     </li>
                 </ul>
-                <div className="socials" onClick={() => setIsOpen(!isOpen)}>
+                <div className="socials">
                     <ImgLink for="linkedin" />
                     <ImgLink for="github" />
                     <ImgLink for="cv" />

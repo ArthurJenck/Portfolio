@@ -8,7 +8,7 @@ const NavBar = () => {
         window.matchMedia("(max-width: 768px)").matches
             ? (window.onscroll = () => {
                   const navLogoOpacity = document.querySelector(".logo-link")!
-                  scrollY !== 0
+                  scrollY > window.innerHeight / 5
                       ? navLogoOpacity.setAttribute(
                             "style",
                             "opacity:0; transition: opacity 0.2s"
