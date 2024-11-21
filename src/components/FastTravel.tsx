@@ -20,8 +20,6 @@ const FastTravel = () => {
         (document.querySelector<HTMLElement>("#contact")?.offsetTop as number) -
         100
 
-    const windowHeight = document.documentElement.scrollHeight
-
     window.onscroll = () => {
         if (scrollY < window.innerHeight / 3) {
             setFastTravVis("hidden")
