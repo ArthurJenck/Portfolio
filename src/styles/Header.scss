@@ -84,18 +84,18 @@ header {
 
     @media screen and (max-width: 1024px) {
         h1 {
-            font-size: 23vw;
+            font-size: clamp(1rem, 23vw, 100px);
             max-width: 100%;
             font-variation-settings: "wght" 700;
             span {
-                font-size: 3.5vw;
+                font-size: clamp(10px, 3.5vw, 1rem);
             }
         }
         .socials {
             margin-top: 1.5rem;
             gap: 1.5rem;
             a img {
-                width: 14.5vw;
+                width: clamp(1rem, 14.5vw, 4rem);
             }
         }
         .chevron {
