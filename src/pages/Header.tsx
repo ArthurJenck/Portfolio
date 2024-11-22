@@ -6,10 +6,9 @@ import HeroVid from "../components/HeroVid"
 
 const Header = () => {
     const handleH1Wght = (e: React.MouseEvent) => {
-        document.documentElement.style.setProperty(
-            "--h1-weight",
-            JSON.stringify(e.pageY)
-        )
+        document
+            .querySelector("header")!
+            .style.setProperty("--h1-weight", JSON.stringify(e.pageY))
     }
 
     return (

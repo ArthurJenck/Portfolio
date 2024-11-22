@@ -1,5 +1,6 @@
 import { useState } from "react"
 import "../styles/FastTravel.scss"
+import { useScroll } from "../hooks"
 
 const FastTravel = () => {
     const [fastTravVis, setFastTravVis] = useState("hidden")
@@ -51,7 +52,11 @@ const FastTravel = () => {
         >
             <li>
                 <a
-                    href="#"
+                    href="/"
+                    onClick={(e) => {
+                        e.preventDefault()
+                        useScroll(0)
+                    }}
                     className={currentSection === "accueil" ? "current" : ""}
                 ></a>
             </li>
