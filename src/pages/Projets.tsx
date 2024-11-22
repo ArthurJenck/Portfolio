@@ -1,11 +1,7 @@
-import SingleProject from "../components/SingleProject"
+// import SingleProject from "../components/SingleProject"
 
 const Projets = () => {
-    return (
-        <section id="projets">
-            <SingleProject />
-        </section>
-    )
+    return <section id="projets"></section>
 }
 
 export default Projets
