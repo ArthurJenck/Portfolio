@@ -7,6 +7,12 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    pointer-events: none;
+
+    // Permet de cliquer sur les liens derrière l'espace vide de la nav
+    * {
+        pointer-events: all;
+    }
 
     .logo-link img {
         height: 11.5svh;

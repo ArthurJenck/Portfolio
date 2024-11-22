@@ -1,6 +1,7 @@
 import { useState } from "react"
 import ImgLink from "./ImgLink"
 import "../styles/Burger.scss"
+import { useScroll } from "../hooks"
 
 const Burger = () => {
     const [isOpen, setIsOpen] = useState(false)
@@ -15,7 +16,15 @@ const Burger = () => {
                 <ImgLink for="logo" />
                 <ul>
                     <li>
-                        <a href="#">Accueil</a>
+                        <a
+                            href="/"
+                            onClick={(e) => {
+                                e.preventDefault()
+                                useScroll(0)
+                            }}
+                        >
+                            Accueil
+                        </a>
                     </li>
                     <li>
                         <a href="#skills">Compétences</a>

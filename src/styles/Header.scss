@@ -50,7 +50,6 @@ header {
         justify-content: center;
         align-items: center;
         margin-top: 1.5vw;
-
         opacity: 0;
         animation: appear 0.3s ease-out calc($base-appear-delay + 0.4s) forwards;
         a {
