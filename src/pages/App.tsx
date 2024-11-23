@@ -1,5 +1,3 @@
-// import { useEffect } from "react"
-
 import NavBar from "../components/NavBar"
 // import App from "./pages/App"
 import Header from "../pages/Header"
@@ -8,12 +6,6 @@ import FastTravel from "../components/FastTravel"
 import Projets from "../pages/Projets"
 
 const App = () => {
-    // useEffect(() => {
-    //     const link = document.querySelector(
-    //         "link[rel~='icon']"
-    //     ) as HTMLLinkElement
-    //     link.href = "./src/assets/icons/logo.svg"
-    // }, [])
     return (
         <>
             <NavBar />
