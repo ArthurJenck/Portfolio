@@ -2,10 +2,11 @@ import "../styles/NavBar.scss"
 import { useEffect } from "react"
 import ImgLink from "./ImgLink"
 import Burger from "./Burger"
+import { useMobile } from "../hooks"
 
 const NavBar = () => {
     const hideLogoMobile = () => {
-        window.matchMedia("(max-width: 768px)").matches
+        useMobile()
             ? (window.onscroll = () => {
                   const navLogoOpacity = document.querySelector(".logo-link")!
                   scrollY > 0

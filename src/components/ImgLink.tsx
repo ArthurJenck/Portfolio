@@ -3,11 +3,12 @@ import linkedinIcon from "../assets/icons/linkedin-icon.svg"
 import githubIcon from "../assets/icons/github-icon.svg"
 import cvIcon from "../assets/icons/cv-icon.svg"
 import "../styles/ImgLink.scss"
-import { useScroll } from "../hooks"
+import { useMobile, useScroll } from "../hooks"
 import { NavLink } from "react-router-dom"
 
 const ImgLink = (props: { for: string }) => {
     let link = "/"
+    let linkMobile = ""
     let icon = Logo
     let alt = "logo"
     switch (props.for) {
@@ -23,6 +24,7 @@ const ImgLink = (props: { for: string }) => {
             break
         case "cv":
             link = "/cv"
+            linkMobile = "/CV Arthur Jenck.pdf"
             icon = cvIcon
             alt = "Lien vers mon CV"
             break
@@ -33,7 +35,7 @@ const ImgLink = (props: { for: string }) => {
 
     return (
         <NavLink
-            to={link}
+            to={props.for === "cv" && useMobile() ? linkMobile : link}
             onClick={
                 props.for === "logo"
                     ? (e) => {
@@ -44,7 +46,6 @@ const ImgLink = (props: { for: string }) => {
             }
             className={props.for === "logo" ? "logo-link" : "socials-link"}
             target={props.for === "logo" ? "" : "_blank"}
-            type="application/pdf"
         >
             <img src={icon} alt={alt} />
         </NavLink>
