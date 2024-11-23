@@ -1,6 +1,7 @@
 import { useEffect } from "react"
-import cvFile from "../assets/docs/CV Arthur Jenck.pdf"
+import cvFile from "/CV Arthur Jenck.pdf"
 
+// Changement du style du body car la balise embed cause un scroll inutile
 const CV = () => {
     useEffect(() => {
         document.title = "Arthur Jenck – CV"
