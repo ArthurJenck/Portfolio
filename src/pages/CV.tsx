@@ -7,7 +7,7 @@ const CV = () => {
     }, [])
     return (
         <embed
-            src="/CVArthur Jenck.pdf#zoom=25"
+            src="/CV Arthur Jenck.pdf#zoom=25"
             width={"100%"}
             height={"100%"}
             style={{ width: "100%", height: "100dvh" }}
