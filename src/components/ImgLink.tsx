@@ -2,6 +2,7 @@ import Logo from "../assets/icons/logo.svg"
 import linkedinIcon from "../assets/icons/linkedin-icon.svg"
 import githubIcon from "../assets/icons/github-icon.svg"
 import cvIcon from "../assets/icons/cv-icon.svg"
+import cvFile from "../assets/docs/CV Arthur Jenck.pdf"
 import "../styles/ImgLink.scss"
 import { useScroll } from "../hooks"
 
@@ -21,7 +22,7 @@ const ImgLink = (props: { for: string }) => {
             alt = "Lien vers mon compte GitHub"
             break
         case "cv":
-            link = `${import.meta.env.VITE_CV_LINK}`
+            link = `${cvFile}`
             icon = cvIcon
             alt = "Lien vers mon CV"
             break
