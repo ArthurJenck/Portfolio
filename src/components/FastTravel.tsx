@@ -8,6 +8,7 @@ const FastTravel = () => {
     const [currentSection, setCurrentSection] = useState("accueil")
     const isDesktop = window.matchMedia("(min-width: 768px)").matches
 
+    // Mettre ça dans une fonction appelée au moment du clic ! Sinon le changement de hauteur après rendu du site va changer les valeurs
     const skillsTop =
         (document.querySelector<HTMLElement>("#skills")?.offsetTop as number) -
         100

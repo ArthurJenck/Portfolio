@@ -2,7 +2,9 @@ import BG_Webm from "../assets/videos/portfolio-bg.webm"
 import BG_Mp4 from "../assets/videos/portfolio-bg.mp4"
 import PlaceHolder from "../assets/images/hero-placeholder.png"
 import { useState, useEffect, useRef } from "react"
+import "../styles/HeroVid.scss"
 
+// Bug de lecture des vidéos sur Safari & iphone
 const isSafari = () => {
     const ua = navigator.userAgent.toLowerCase()
     return ua.indexOf("safar") > -1 && ua.indexOf("chrome") < 0
@@ -13,6 +15,7 @@ const HeroVid = () => {
     const [shouldUseImg, setShouldUseImg] = useState(false)
 
     useEffect(() => {
+        // Les attributs doivent être forcés afin que la vidéo se lance sur les appareils Apple
         if (isSafari() && ref.current) {
             const player = ref.current.children[0] as HTMLVideoElement
             if (player) {

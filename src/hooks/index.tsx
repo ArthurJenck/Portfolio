@@ -1,6 +1,7 @@
 export const useScroll = (value: number) => {
     window.scrollTo({ top: value, behavior: "smooth" })
 
+    // "Nettoyer" l'url affichée lors du scroll to top pour ne garder que le nom de domaine
     value === 0
         ? history.pushState(
               "",
