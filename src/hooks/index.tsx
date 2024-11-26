@@ -1,3 +1,5 @@
+import { useEffect, useRef } from "react"
+
 export const useScroll = (value: number) => {
     window.scrollTo({ top: value, behavior: "smooth" })
 
@@ -26,4 +28,31 @@ export const useMobile = () => {
     } else {
         return false
     }
+}
+
+type SomeFunction = (...args: any[]) => void
+type Timer = ReturnType<typeof setTimeout>
+
+export const useDebounce = <Func extends SomeFunction>(
+    func: Func,
+    delay = 500
+) => {
+    const timer = useRef<Timer>()
+
+    useEffect(() => {
+        return () => {
+            if (!timer.current) return
+            clearTimeout(timer.current)
+        }
+    }, [])
+
+    const debouncedFunction = ((...args) => {
+        const newTimer = setTimeout(() => {
+            func(...args)
+        }, delay)
+        clearTimeout(timer.current)
+        timer.current = newTimer
+    }) as Func
+
+    return debouncedFunction
 }

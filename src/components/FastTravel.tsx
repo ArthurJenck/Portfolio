@@ -1,6 +1,6 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import "../styles/FastTravel.scss"
-import { useScroll } from "../hooks"
+import { useDebounce, useScroll } from "../hooks"
 
 const FastTravel = () => {
     const [fastTravVis, setFastTravVis] = useState("hidden")
@@ -8,21 +8,19 @@ const FastTravel = () => {
     const [currentSection, setCurrentSection] = useState("accueil")
     const isDesktop = window.matchMedia("(min-width: 768px)").matches
 
-    // Mettre ça dans une fonction appelée au moment du clic ! Sinon le changement de hauteur après rendu du site va changer les valeurs
-    const skillsTop =
-        (document.querySelector<HTMLElement>("#skills")?.offsetTop as number) -
-        100
-    const projetsTop =
-        (document.querySelector<HTMLElement>("#projets")?.offsetTop as number) -
-        100
-    const aboutTop =
-        (document.querySelector<HTMLElement>("#about")?.offsetTop as number) -
-        100
-    const contactTop =
-        (document.querySelector<HTMLElement>("#contact")?.offsetTop as number) -
-        100
-
-    window.onscroll = () => {
+    const checkCurrentSect = async () => {
+        const skillsTop =
+            (document.querySelector<HTMLElement>("#skills")
+                ?.offsetTop as number) - 100
+        const projetsTop =
+            (document.querySelector<HTMLElement>("#projets")
+                ?.offsetTop as number) - 100
+        const aboutTop =
+            (document.querySelector<HTMLElement>("#about")
+                ?.offsetTop as number) - 100
+        const contactTop =
+            (document.querySelector<HTMLElement>("#contact")
+                ?.offsetTop as number) - 100
         if (scrollY < window.innerHeight / 3) {
             setFastTravVis("hidden")
             setFastTravOpac(0)
@@ -41,6 +39,15 @@ const FastTravel = () => {
         } else if (scrollY >= 0 && scrollY <= skillsTop) {
             setCurrentSection("accueil")
         }
+    }
+
+    useEffect(() => {
+        checkCurrentSect()
+    }, [])
+    const debouncedCheckSect = useDebounce(checkCurrentSect, 10)
+
+    window.onscroll = () => {
+        debouncedCheckSect()
     }
 
     return isDesktop ? (

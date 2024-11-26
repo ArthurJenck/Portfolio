@@ -29,10 +29,12 @@
         left: 5.5vw;
         h3 {
             font-size: 1.2rem;
+            text-align: left;
+            min-width: 4rem;
         }
         ul {
             gap: 1rem;
-            max-width: 45vw;
+            max-width: 58vw;
         }
     }
 }

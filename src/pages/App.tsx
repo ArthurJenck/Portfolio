@@ -4,6 +4,7 @@ import Header from "../pages/Header"
 import Skills from "../pages/Skills"
 import FastTravel from "../components/FastTravel"
 import Projets from "../pages/Projets"
+import About from "./About"
 
 const App = () => {
     return (
@@ -13,6 +14,7 @@ const App = () => {
             <Header />
             <Skills />
             <Projets />
+            <About />
         </>
     )
 }
