@@ -11,16 +11,20 @@ const FastTravel = () => {
     const checkCurrentSect = async () => {
         const skillsTop =
             (document.querySelector<HTMLElement>("#skills")
-                ?.offsetTop as number) - 100
+                ?.offsetTop as number) -
+            window.innerHeight / 2.5
         const projetsTop =
             (document.querySelector<HTMLElement>("#projets")
-                ?.offsetTop as number) - 100
+                ?.offsetTop as number) -
+            window.innerHeight / 2.5
         const aboutTop =
             (document.querySelector<HTMLElement>("#about")
-                ?.offsetTop as number) - 100
+                ?.offsetTop as number) -
+            window.innerHeight / 2.5
         const contactTop =
             (document.querySelector<HTMLElement>("#contact")
-                ?.offsetTop as number) - 100
+                ?.offsetTop as number) -
+            window.innerHeight / 2.5
         if (scrollY < window.innerHeight / 3) {
             setFastTravVis("hidden")
             setFastTravOpac(0)

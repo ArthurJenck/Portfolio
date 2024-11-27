@@ -1,12 +1,16 @@
 import SingleProject from "../components/SingleProject"
 import techsAndProjects from "../data/projects"
+import "../styles/Projets.scss"
 
 const Projets = () => {
     const projectsArr = techsAndProjects.projectsArr
+    const datedProjects = projectsArr.sort((a, b) => {
+        return b.date.getTime() - a.date.getTime()
+    })
 
     return (
         <section id="projets">
-            {projectsArr.map((project, index) => {
+            {datedProjects.map((project, index) => {
                 return (
                     <SingleProject
                         key={`projet-${index}`}
@@ -15,7 +19,8 @@ const Projets = () => {
                         techs={project.techs}
                         gitLink={project.gitLink}
                         webLink={project.webLink}
-                        pic={project.picDesk}
+                        picDesk={project.picDesk}
+                        picMobile={project.picMobile}
                     />
                 )
             })}

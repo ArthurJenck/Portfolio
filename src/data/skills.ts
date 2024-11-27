@@ -81,7 +81,7 @@ const skillsArr = [
         categ: "Outils",
         name: "Git",
         pic: gitIcon,
-        desc: "Versioning complet, changements de branches, commits clairs, documentation de projet, utilisation de GitHub comme GitLab, intégration des GitHub Actions",
+        desc: "Versioning complet - Branching - Convention de commits - Documentation de projet - Utilisation de GitHub comme GitLab - Intégration des GitHub Pages et GitHub Actions",
     },
     {
         categ: "Outils",

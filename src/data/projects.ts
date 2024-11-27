@@ -1,4 +1,9 @@
 import htmlCssIcon from "../assets/icons/techs/html-css.svg"
+import scssIcon from "../assets/icons/techs/scss.svg"
+import jsTsIcon from "../assets/icons/techs/js-ts.svg"
+import reactIcon from "../assets/icons/techs/react.svg"
+import nodeIcon from "../assets/icons/techs/node.svg"
+import mongoIcon from "../assets/icons/techs/mongo.svg"
 
 import BergamotteDesk from "../assets/images/bergamotte_desk.webp"
 import BergamotteMob from "../assets/images/bergamotte_mobile.webp"
@@ -11,27 +16,27 @@ const techsArr = [
     },
     {
         title: "Sass / Scss",
-        icon: htmlCssIcon,
+        icon: scssIcon,
         order: 2,
     },
     {
         title: "Javascript / TS",
-        icon: htmlCssIcon,
+        icon: jsTsIcon,
         order: 3,
     },
     {
         title: "React",
-        icon: htmlCssIcon,
+        icon: reactIcon,
         order: 4,
     },
     {
         title: "Node.js",
-        icon: htmlCssIcon,
+        icon: nodeIcon,
         order: 5,
     },
     {
         title: "MongoDB",
-        icon: htmlCssIcon,
+        icon: mongoIcon,
         order: 6,
     },
 ]
