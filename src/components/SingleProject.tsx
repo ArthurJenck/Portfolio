@@ -1,6 +1,6 @@
 import ImgLink from "./ImgLink"
 import "../styles/SingleProject.scss"
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 import { useMobile } from "../hooks"
 
 interface SingleProjectProps {
@@ -27,6 +27,7 @@ const SingleProject = ({
     picMobile,
 }: SingleProjectProps) => {
     const ref = useRef<HTMLDivElement>(null)
+    const [isOpen, setIsOpen] = useState(false)
 
     useEffect(() => {
         if (useMobile()) {
@@ -44,9 +45,21 @@ const SingleProject = ({
     }, [ref.current])
 
     return (
-        <article className="projects-item" ref={ref}>
+        <article
+            className={isOpen ? "projects-item open" : "projects-item"}
+            ref={ref}
+            onClick={() => {
+                setIsOpen(!isOpen)
+            }}
+        >
             <h3>{name}</h3>
-            <div className="projects-item__content">
+            <div
+                className={
+                    isOpen
+                        ? "projects-item__content open"
+                        : "projects-item__content"
+                }
+            >
                 <div>
                     <ul className="projects-item__techs">
                         {techs.map((tech) => {
@@ -59,7 +72,12 @@ const SingleProject = ({
                         })}
                     </ul>
                     <p>{desc}</p>
-                    <div className="project-item__links">
+                    <div
+                        className="project-item__links"
+                        onClick={(e) => {
+                            e.stopPropagation()
+                        }}
+                    >
                         {gitLink ? (
                             <ImgLink
                                 for="github"

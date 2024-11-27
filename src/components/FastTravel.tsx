@@ -32,16 +32,16 @@ const FastTravel = () => {
             setFastTravVis("visible")
             setFastTravOpac(1)
         }
-        if (scrollY > skillsTop && scrollY < projetsTop) {
-            setCurrentSection("skills")
-        }
-        if (scrollY >= projetsTop && scrollY < aboutTop) {
-            setCurrentSection("projets")
-        }
-        if (scrollY > aboutTop && scrollY <= contactTop) {
-            setCurrentSection("about")
-        } else if (scrollY >= 0 && scrollY <= skillsTop) {
+        if (scrollY >= 0 && scrollY <= skillsTop) {
             setCurrentSection("accueil")
+        } else if (scrollY > skillsTop && scrollY < projetsTop) {
+            setCurrentSection("skills")
+        } else if (scrollY >= projetsTop && scrollY < aboutTop) {
+            setCurrentSection("projets")
+        } else if (scrollY > aboutTop && scrollY <= contactTop) {
+            setCurrentSection("about")
+        } else {
+            setCurrentSection("contact")
         }
     }
 

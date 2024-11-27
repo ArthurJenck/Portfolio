@@ -10,6 +10,7 @@ const Projets = () => {
 
     return (
         <section id="projets">
+            <h2>Projets</h2>
             {datedProjects.map((project, index) => {
                 return (
                     <SingleProject

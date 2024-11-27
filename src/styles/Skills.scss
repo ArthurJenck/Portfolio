@@ -1,15 +1,6 @@
 #skills {
     padding: 4rem 0;
     position: relative;
-    h2 {
-        font-size: 5vw;
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);
-        top: 0;
-        width: fit-content;
-        letter-spacing: 2px;
-    }
 
     @media screen and (max-width: 1024px) {
         margin: 2rem 0;
