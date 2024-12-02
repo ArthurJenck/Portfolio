@@ -28,7 +28,7 @@
         border-radius: 100% 100% 0 0;
         width: clamp(800px, 120vw, 120vw);
         height: 115vh;
-        overflow-y: visible;
+        overflow-y: hidden;
         background-image: var(--project-pic);
         background-position: center top;
         background-size: var(--background-size);
@@ -48,9 +48,10 @@
         opacity: 0;
         max-width: 60vw;
         margin-bottom: 2rem;
+        user-select: none;
         &.open {
             opacity: 1;
-            transition: opacity 0.1s ease-out;
+            user-select: auto;
         }
         .projects-item__techs {
             display: flex;

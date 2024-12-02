@@ -33,13 +33,13 @@ const SingleProject = ({
         if (useMobile()) {
             ref.current!.style.setProperty(
                 "--project-pic",
-                ` linear-gradient(rgba(44, 37, 62, 0.7), rgba(44, 37, 62, 0.7)), url(${picMobile})`
+                ` linear-gradient(rgba(44, 37, 62, 0.8), rgba(44, 37, 62, 0.8)), url(${picMobile})`
             )
             ref.current!.style.setProperty("--background-size", "90%")
         } else {
             ref.current!.style.setProperty(
                 "--project-pic",
-                ` linear-gradient(rgba(44, 37, 62, 0.7), rgba(44, 37, 62, 0.7)), url(${picDesk})`
+                ` linear-gradient(rgba(44, 37, 62, 0.8), rgba(44, 37, 62, 0.8)), url(${picDesk})`
             )
         }
     }, [ref.current])
@@ -59,6 +59,9 @@ const SingleProject = ({
                         ? "projects-item__content open"
                         : "projects-item__content"
                 }
+                onClick={(e) => {
+                    isOpen ? e.stopPropagation() : null
+                }}
             >
                 <div>
                     <ul className="projects-item__techs">
@@ -72,12 +75,7 @@ const SingleProject = ({
                         })}
                     </ul>
                     <p>{desc}</p>
-                    <div
-                        className="project-item__links"
-                        onClick={(e) => {
-                            e.stopPropagation()
-                        }}
-                    >
+                    <div className="project-item__links">
                         {gitLink ? (
                             <ImgLink
                                 for="github"
