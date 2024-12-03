@@ -27,7 +27,7 @@ const SingleProject = ({
     picMobile,
 }: SingleProjectProps) => {
     const ref = useRef<HTMLDivElement>(null)
-    const [isOpen, setIsOpen] = useState(true)
+    const [isOpen, setIsOpen] = useState(false)
     const toUseDesc = desc.split("\n").filter((i) => {
         return i !== ""
     })

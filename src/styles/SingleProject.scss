@@ -106,7 +106,7 @@
     @media screen and (max-width: 768px) {
         padding: 8vh 13vw 0 13vw;
         &::before {
-            height: 75vh;
+            height: 100vh;
             border-width: 5px;
         }
         h3 {
@@ -118,6 +118,10 @@
             gap: 0.5rem;
             margin-top: 1rem;
             margin-bottom: 0.5rem;
+            transition: opacity 0s 0s;
+            &.open {
+                transition-delay: 50ms;
+            }
             .projects-item__details {
                 gap: 1rem;
                 .projects-item__techs {
