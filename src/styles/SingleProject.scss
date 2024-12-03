@@ -34,6 +34,9 @@
         background-size: var(--background-size);
         z-index: -1;
     }
+    &:first-of-type::before {
+        border: none;
+    }
 
     h3 {
         position: absolute;
@@ -104,10 +107,11 @@
         padding: 8vh 13vw 0 13vw;
         &::before {
             height: 75vh;
+            border-width: 5px;
         }
         h3 {
             font-size: 4.5vw;
-            top: 2.5rem;
+            top: 2rem;
         }
         .projects-item__content {
             flex-direction: column-reverse;
