@@ -15,7 +15,7 @@ html,
 body {
     background-color: colors.$main;
     h2 {
-        font-size: 5vw;
+        font-size: clamp(2rem, 5vw, 5vw);
         position: relative;
         left: 50%;
         transform: translateX(-50%);

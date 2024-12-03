@@ -27,7 +27,10 @@ const SingleProject = ({
     picMobile,
 }: SingleProjectProps) => {
     const ref = useRef<HTMLDivElement>(null)
-    const [isOpen, setIsOpen] = useState(false)
+    const [isOpen, setIsOpen] = useState(true)
+    const toUseDesc = desc.split("\n").filter((i) => {
+        return i !== ""
+    })
 
     useEffect(() => {
         if (useMobile()) {
@@ -59,22 +62,26 @@ const SingleProject = ({
                         ? "projects-item__content open"
                         : "projects-item__content"
                 }
-                onClick={(e) => {
-                    isOpen ? e.stopPropagation() : null
-                }}
             >
-                <div>
+                <div
+                    className="projects-item__details"
+                    onClick={(e) => {
+                        isOpen ? e.stopPropagation() : null
+                    }}
+                >
                     <ul className="projects-item__techs">
                         {techs.map((tech) => {
                             return (
                                 <li key={tech.title}>
                                     <img src={tech.icon} aria-hidden />
-                                    {tech.title}
+                                    <span>{tech.title}</span>
                                 </li>
                             )
                         })}
                     </ul>
-                    <p>{desc}</p>
+                    {toUseDesc.map((paraph, i) => {
+                        return <p key={`paraph-${i}`}>{paraph}</p>
+                    })}
                     <div className="project-item__links">
                         {gitLink ? (
                             <ImgLink
@@ -92,6 +99,9 @@ const SingleProject = ({
                     src={picDesk}
                     alt="Image du projet"
                     className="projects-item__pic"
+                    onClick={(e) => {
+                        isOpen ? e.stopPropagation() : null
+                    }}
                 />
             </div>
         </article>
