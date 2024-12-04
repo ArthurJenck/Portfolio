@@ -1,6 +1,6 @@
 import { useState } from "react"
 import SingleProject from "../components/SingleProject"
-import TechFilter from "../components/TechFilter"
+// import TechFilter from "../components/TechFilter"
 import techsAndProjects from "../data/projects"
 import "../styles/Projets.scss"
 
@@ -9,13 +9,19 @@ const Projets = () => {
     const datedProjects = projectsArr.sort((a, b) => {
         return b.date.getTime() - a.date.getTime()
     })
-    const [toUseTechs, setToUseTechs] = useState(techsAndProjects.techsArr)
-    console.log(toUseTechs)
+    const baseTechs = techsAndProjects.techsArr.sort((a, b) => {
+        return a.order - b.order
+    })
+    const [toUseTechs, setToUseTechs] = useState(baseTechs)
 
     return (
         <section id="projets">
             <h2>Projets</h2>
-            <TechFilter toUseTechs={toUseTechs} setToUseTechs={setToUseTechs} />
+            {/* <TechFilter
+                toUseTechs={toUseTechs}
+                setToUseTechs={setToUseTechs}
+                baseTechs={baseTechs}
+            /> */}
             {datedProjects.map((project, index) => {
                 if (project.techs.some((tech) => toUseTechs.includes(tech))) {
                     return (
