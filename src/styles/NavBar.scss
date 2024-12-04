@@ -19,7 +19,10 @@ nav {
         transition: opacity 0.2s;
     }
 
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 768px) {
         height: 4rem;
+        .logo-link img {
+            height: 10vh;
+        }
     }
 }

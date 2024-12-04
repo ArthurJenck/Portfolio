@@ -6,7 +6,6 @@ const FastTravel = () => {
     const [fastTravVis, setFastTravVis] = useState("hidden")
     const [fastTravOpac, setFastTravOpac] = useState(0)
     const [currentSection, setCurrentSection] = useState("accueil")
-    const isDesktop = window.matchMedia("(min-width: 768px)").matches
 
     const checkCurrentSect = async () => {
         const skillsTop =
@@ -54,7 +53,7 @@ const FastTravel = () => {
         debouncedCheckSect()
     }
 
-    return isDesktop ? (
+    return (
         <ul
             className="fast-travel"
             style={{
@@ -97,7 +96,7 @@ const FastTravel = () => {
                 ></a>
             </li>
         </ul>
-    ) : null
+    )
 }
 
 export default FastTravel

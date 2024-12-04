@@ -14,11 +14,11 @@
         align-items: flex-start;
         gap: 4px;
         img {
-            width: 1.5rem;
-            height: 1.5rem;
+            width: clamp(1.5rem, 3.5vw, 3.5vw);
+            height: clamp(1.5rem, 3.5vw, 3.5vw);
         }
         p {
-            font-size: 1rem;
+            font-size: clamp(1rem, 2vw, 2vw);
         }
     }
 }

@@ -28,7 +28,7 @@
         margin-top: 5svh;
         left: 5.5vw;
         h3 {
-            font-size: 1.2rem;
+            font-size: clamp(1.2rem, 2.5vw, 2.5vw);
             text-align: left;
             min-width: 4rem;
         }

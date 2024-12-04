@@ -18,7 +18,9 @@ const Header = () => {
             onMouseOver={(e) => handleH1Wght(e)}
         >
             <h1>
-                Arthur Jenck <span>Développeur Web Front-End</span>
+                Arthur
+                <br />
+                Jenck <span>Développeur Web Front-End</span>
             </h1>
             <div className="socials" onClick={(e) => e.stopPropagation()}>
                 <ImgLink for="linkedin" />

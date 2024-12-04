@@ -13,6 +13,7 @@ const Projets = () => {
         return a.order - b.order
     })
     const [toUseTechs, setToUseTechs] = useState(baseTechs)
+    console.log(setToUseTechs)
 
     return (
         <section id="projets">
