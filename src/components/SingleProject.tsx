@@ -14,6 +14,7 @@ interface SingleProjectProps {
     gitLink?: string
     webLink?: string
     picDesk: string
+    picSmol: string
     picMobile: string
 }
 
@@ -24,6 +25,7 @@ const SingleProject = ({
     gitLink,
     webLink,
     picDesk,
+    picSmol,
     picMobile,
 }: SingleProjectProps) => {
     const ref = useRef<HTMLDivElement>(null)
@@ -96,7 +98,7 @@ const SingleProject = ({
                     </div>
                 </div>
                 <img
-                    src={picDesk}
+                    src={picSmol}
                     alt="Image du projet"
                     className="projects-item__pic"
                     onClick={(e) => {

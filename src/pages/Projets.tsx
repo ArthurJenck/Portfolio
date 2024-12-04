@@ -27,6 +27,7 @@ const Projets = () => {
                             gitLink={project.gitLink}
                             webLink={project.webLink}
                             picDesk={project.picDesk}
+                            picSmol={project.picSmol}
                             picMobile={project.picMobile}
                         />
                     )
