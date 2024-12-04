@@ -8,6 +8,7 @@
         flex-direction: column;
         gap: 0.5rem;
         position: relative;
+        cursor: pointer;
 
         // Sert pour agrandir la zone de hover
         &::before {
@@ -153,6 +154,7 @@
             width: 400vw;
             height: 400vw;
             transition-duration: 0.5s;
+            cursor: default;
         }
         .burger-menu {
             opacity: 1;
