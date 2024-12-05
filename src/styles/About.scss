@@ -5,7 +5,7 @@
     position: relative;
     h2 {
         position: absolute;
-        top: 15vh;
+        top: 12vh;
     }
     .about-top {
         display: flex;
@@ -24,7 +24,7 @@
             top: 0;
             border-radius: 100% 100% 0 0;
             width: clamp(800px, 120vw, 120vw);
-            height: 110vh;
+            height: 140vh;
             overflow-y: visible;
             background-color: colors.$main;
             z-index: -1;
