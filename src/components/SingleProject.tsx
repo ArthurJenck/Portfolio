@@ -57,6 +57,7 @@ const SingleProject = ({
                 setIsOpen(!isOpen)
             }}
         >
+            <span className="project-top"></span>
             <h3>{name}</h3>
             <div
                 className={

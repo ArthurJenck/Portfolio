@@ -48,7 +48,7 @@ const ImgLink = (props: { for: string; link?: string; otherAlt?: string }) => {
         <NavLink
             to={props.for === "cv" && useMobile() ? linkMobile : link}
             onClick={
-                props.for === "logo"
+                props.for === "logo" && !props.link
                     ? (e) => {
                           e.preventDefault()
                           useScroll(0)

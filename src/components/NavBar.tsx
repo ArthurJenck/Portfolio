@@ -1,8 +1,7 @@
 import "../styles/NavBar.scss"
-import { useEffect } from "react"
+import { useDebounce, useMobile } from "../hooks"
 import ImgLink from "./ImgLink"
 import Burger from "./Burger"
-import { useDebounce, useMobile } from "../hooks"
 
 const NavBar = () => {
     const changeNavOpacity = () => {
@@ -22,15 +21,12 @@ const NavBar = () => {
 
     const hideLogoMobile = () => {
         useMobile()
-            ? (window.onscroll = () => {
-                  debouncedChangeNavOpac()
+            ? window.addEventListener("scroll", debouncedChangeNavOpac, {
+                  passive: true,
               })
             : null
     }
-
-    useEffect(() => {
-        hideLogoMobile()
-    }, [])
+    hideLogoMobile()
 
     return (
         <nav>

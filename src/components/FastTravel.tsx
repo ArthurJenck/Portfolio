@@ -49,9 +49,9 @@ const FastTravel = () => {
     }, [])
     const debouncedCheckSect = useDebounce(checkCurrentSect, 10)
 
-    window.onscroll = () => {
-        debouncedCheckSect()
-    }
+    window.addEventListener("scroll", debouncedCheckSect, {
+        passive: true,
+    })
 
     return (
         <ul

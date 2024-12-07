@@ -15,7 +15,6 @@
     transform: translateX(-50%);
     overflow-x: clip;
     max-height: 0;
-    // transition: max-height 0.2s ease-out;
     &.open {
         max-height: 1000px;
     }
@@ -53,11 +52,7 @@
         margin-bottom: 2rem;
         user-select: none;
         gap: 7.25vw;
-        // transition: opacity 0.1s 0s;
         &.open {
-            // transition-duration: 0.2s;
-            // transition-delay: 0.1s;
-            // opacity: 1;
             display: flex;
             user-select: auto;
         }

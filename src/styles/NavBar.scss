@@ -21,8 +21,11 @@ nav {
 
     @media screen and (max-width: 768px) {
         height: 4rem;
-        .logo-link img {
-            height: 10vh;
+        .logo-link {
+            // visibility: hidden;
+            img {
+                height: 10vh;
+            }
         }
     }
 }

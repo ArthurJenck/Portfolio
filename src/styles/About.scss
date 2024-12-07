@@ -3,6 +3,7 @@
 #about {
     overflow-y: visible;
     position: relative;
+
     h2 {
         position: absolute;
         top: 12vh;
@@ -28,6 +29,44 @@
             overflow-y: visible;
             background-color: colors.$main;
             z-index: -1;
+        }
+    }
+
+    .about-content {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 50vw;
+        gap: 2rem;
+        margin: 8vh auto;
+
+        img {
+            height: 100%;
+        }
+
+        .about-content__text {
+            h3 {
+                font-size: 2rem;
+                margin-bottom: 1.25rem;
+            }
+            p:last-child {
+                margin-top: 1rem;
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        h2 {
+            left: 1.5rem;
+            transform: none;
+        }
+
+        .about-content {
+            flex-direction: column;
+            max-width: 75vw;
+            margin: 4rem;
         }
     }
 }

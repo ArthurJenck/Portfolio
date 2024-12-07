@@ -18,7 +18,6 @@ const TechFilter = ({
     setToUseTechs,
     baseTechs,
 }: TechFilterProps) => {
-    console.log(toUseTechs, setToUseTechs)
     return (
         <div className="tech-filter">
             <button>

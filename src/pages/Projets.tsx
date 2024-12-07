@@ -1,5 +1,5 @@
-import { useState } from "react"
-import SingleProject from "../components/SingleProject"
+import { lazy, useState } from "react"
+const SingleProject = lazy(() => import("../components/SingleProject"))
 // import TechFilter from "../components/TechFilter"
 import techsAndProjects from "../data/projects"
 import "../styles/Projets.scss"
@@ -13,7 +13,6 @@ const Projets = () => {
         return a.order - b.order
     })
     const [toUseTechs, setToUseTechs] = useState(baseTechs)
-    console.log(setToUseTechs)
 
     return (
         <section id="projets">
