@@ -14,9 +14,14 @@ nav {
         pointer-events: all;
     }
 
-    .logo-link img {
+    .logo-link {
+        transition: 0.2s opacity;
+    }
+
+    img {
         height: 11.5svh;
         transition: opacity 0.2s;
+        pointer-events: none;
     }
 
     @media screen and (max-width: 768px) {

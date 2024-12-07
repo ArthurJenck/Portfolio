@@ -9,12 +9,9 @@ const NavBar = () => {
         scrollY > 0
             ? navLogoOpacity.setAttribute(
                   "style",
-                  "opacity:0; transition: opacity 0.2s"
+                  "opacity:0; pointer-events: none"
               )
-            : navLogoOpacity.setAttribute(
-                  "style",
-                  "opacity:1; transition: opacity 0.2s"
-              )
+            : navLogoOpacity.setAttribute("style", "opacity:1")
     }
 
     const debouncedChangeNavOpac = useDebounce(changeNavOpacity, 10)

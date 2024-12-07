@@ -98,14 +98,16 @@ const SingleProject = ({
                         ) : null}
                     </div>
                 </div>
-                <img
-                    src={picSmol}
-                    alt="Image du projet"
-                    className="projects-item__pic"
-                    onClick={(e) => {
-                        isOpen ? e.stopPropagation() : null
-                    }}
-                />
+                <a href={webLink ? webLink : gitLink} target="_blank">
+                    <img
+                        src={picSmol}
+                        alt="Image du projet"
+                        className="projects-item__pic"
+                        onClick={(e) => {
+                            isOpen ? e.stopPropagation() : null
+                        }}
+                    />
+                </a>
             </div>
         </article>
     )

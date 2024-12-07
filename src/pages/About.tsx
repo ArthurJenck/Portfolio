@@ -1,4 +1,6 @@
 import spiral from "../assets/images/spiral.svg"
+import { useEffect } from "react"
+import { useMobile } from "../hooks"
 import "../styles/About.scss"
 
 const About = ({
@@ -6,12 +8,31 @@ const About = ({
         e
     },
 }) => {
+    const isMobile = useMobile()
+    const spiralTurnMobile = () => {
+        const spiralImg = document.querySelector(
+            ".about-content>img"
+        ) as HTMLImageElement
+        spiralImg.style.transform = `rotate(-${scrollY / 2}deg)`
+    }
+
+    useEffect(() => {
+        if (isMobile) {
+            spiralTurnMobile()
+            window.addEventListener("scroll", spiralTurnMobile)
+        }
+    }, [])
+
     return (
         <section
             id="about"
-            onMouseMove={(e) => {
-                spiralTurn(e)
-            }}
+            onMouseMove={
+                isMobile
+                    ? (e) => {
+                          spiralTurn(e)
+                      }
+                    : () => {}
+            }
         >
             <span className="about-top"></span>
             <h2>À propos</h2>
