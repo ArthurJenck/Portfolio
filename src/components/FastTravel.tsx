@@ -62,8 +62,7 @@ const FastTravel = () => {
     }
 
     useEffect(() => {
-        let isMounted = true
-        isMounted ? checkCurrentSect() : null
+        checkCurrentSect()
     }, [])
     const debouncedCheckSect = useDebounce(checkCurrentSect, 10)
 
