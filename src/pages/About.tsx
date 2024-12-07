@@ -27,7 +27,7 @@ const About = ({
         <section
             id="about"
             onMouseMove={
-                isMobile
+                !isMobile
                     ? (e) => {
                           spiralTurn(e)
                       }
