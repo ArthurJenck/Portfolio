@@ -56,3 +56,16 @@ export const useDebounce = <Func extends SomeFunction>(
 
     return debouncedFunction
 }
+
+export function useIsMounted() {
+    const isMounted = useRef(false)
+
+    useEffect(() => {
+        isMounted.current = true
+        return () => {
+            isMounted.current = false
+        }
+    }, [])
+
+    return isMounted
+}

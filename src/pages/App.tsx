@@ -16,7 +16,6 @@ const App = () => {
             ".about-content>img"
         ) as HTMLImageElement
         spiralImg!.style.transform = `rotate(${spiralRotate}deg)`
-        console.log(spiralImg.style.transform)
     }
 
     return (

@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react"
 import "../styles/FastTravel.scss"
-import { useDebounce, useScroll } from "../hooks"
+import { useDebounce, useIsMounted, useScroll } from "../hooks"
 
 const FastTravel = () => {
     const [fastTravVis, setFastTravVis] = useState("hidden")
     const [fastTravOpac, setFastTravOpac] = useState(0)
     const [currentSection, setCurrentSection] = useState("accueil")
+    const isMounted = useIsMounted()
 
-    const checkCurrentSect = async () => {
+    const checkCurrentSect = () => {
         const skillsTop =
             (document.querySelector<HTMLElement>("#skills")
                 ?.offsetTop as number) -
@@ -25,27 +26,44 @@ const FastTravel = () => {
                 ?.offsetTop as number) -
             window.innerHeight / 2.5
         if (scrollY < window.innerHeight / 3) {
-            setFastTravVis("hidden")
-            setFastTravOpac(0)
+            if (isMounted.current) {
+                setFastTravVis("hidden")
+                setFastTravOpac(0)
+            }
         } else {
-            setFastTravVis("visible")
-            setFastTravOpac(1)
+            if (isMounted.current) {
+                setFastTravVis("visible")
+                setFastTravOpac(1)
+            }
         }
-        if (scrollY >= 0 && scrollY <= skillsTop) {
+        if (scrollY >= 0 && scrollY <= skillsTop && isMounted.current) {
             setCurrentSection("accueil")
-        } else if (scrollY > skillsTop && scrollY < projetsTop) {
+        } else if (
+            scrollY > skillsTop &&
+            scrollY < projetsTop &&
+            isMounted.current
+        ) {
             setCurrentSection("skills")
-        } else if (scrollY >= projetsTop && scrollY < aboutTop) {
+        } else if (
+            scrollY >= projetsTop &&
+            scrollY < aboutTop &&
+            isMounted.current
+        ) {
             setCurrentSection("projets")
-        } else if (scrollY > aboutTop && scrollY <= contactTop) {
+        } else if (
+            scrollY > aboutTop &&
+            scrollY <= contactTop &&
+            isMounted.current
+        ) {
             setCurrentSection("about")
-        } else {
+        } else if (isMounted.current) {
             setCurrentSection("contact")
         }
     }
 
     useEffect(() => {
-        checkCurrentSect()
+        let isMounted = true
+        isMounted ? checkCurrentSect() : null
     }, [])
     const debouncedCheckSect = useDebounce(checkCurrentSect, 10)
 
