@@ -52,12 +52,24 @@
     }
 
     @media screen and (max-width: 1024px) {
-        top: 5vh;
+        top: calc(2rem + 11.5vh);
+        left: calc(100vw - 3.5rem - 3.5vw);
         button img {
             width: 3.5rem;
         }
         ul li img {
             width: 2.5rem;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        top: 7rem;
+        left: calc(96vw - 2.25rem);
+        button img {
+            width: clamp(3rem, 3.5vw, 3.5vw);
+        }
+        ul li img {
+            width: clamp(2rem, 3vw, 3vw);
         }
     }
 }
