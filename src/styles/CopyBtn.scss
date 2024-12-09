@@ -1,0 +1,10 @@
+.about-links__copy {
+    display: none;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(264deg)
+        brightness(99%) contrast(103%);
+    width: 0.85rem;
+    position: absolute;
+    right: -1.25rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
