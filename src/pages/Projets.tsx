@@ -1,6 +1,6 @@
 import { lazy, useState } from "react"
 const SingleProject = lazy(() => import("../components/SingleProject"))
-import TechFilter from "../components/TechFilter"
+import TechFilter, { techArrayProps } from "../components/TechFilter"
 import techsAndProjects from "../data/projects"
 import "../styles/Projets.scss"
 
@@ -16,6 +16,7 @@ const Projets = () => {
     ]
     const [toUseTechs, setToUseTechs] = useState(baseTechs)
     const [noFiltersClicked, setNoFiltersClicked] = useState(true)
+    const activeTechs = [] as Array<techArrayProps>
 
     return (
         <section id="projets">
@@ -27,7 +28,14 @@ const Projets = () => {
                 setNoFiltersClicked={setNoFiltersClicked}
             />
             {datedProjects.map((project, index) => {
-                if (project.techs.some((tech) => tech.active)) {
+                activeTechs.length = 0
+                toUseTechs.forEach((tech) => {
+                    tech.active ? activeTechs.push(tech) : null
+                })
+                if (
+                    activeTechs.every((tech) => project.techs.includes(tech)) ||
+                    noFiltersClicked
+                ) {
                     return (
                         <SingleProject
                             key={`projet-${index}`}

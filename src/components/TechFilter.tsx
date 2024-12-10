@@ -9,7 +9,7 @@ interface TechFilterProps {
     noFiltersClicked: boolean
     setNoFiltersClicked: Dispatch<SetStateAction<boolean>>
 }
-interface techArrayProps {
+export interface techArrayProps {
     title: string
     icon: string
     activeIcon: string
