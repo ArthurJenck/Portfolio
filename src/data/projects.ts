@@ -38,6 +38,9 @@ import BookiMob from "../assets/images/projects-mobile/booki.webp"
 import MorpionDesk from "../assets/images/projects-desktop/morpion.webp"
 import MorpionSmol from "../assets/images/projects-smol/morpion.webp"
 import MorpionMob from "../assets/images/projects-mobile/morpion.webp"
+import SpiralfolioDesk from "../assets/images/projects-desktop/spiralfolio.webp"
+import SpiralfolioSmol from "../assets/images/projects-smol/spiralfolio.webp"
+import SpiralfolioMob from "../assets/images/projects-mobile/spiralfolio.webp"
 
 const techsArr = [
     {
@@ -98,7 +101,7 @@ const projectsArr = [
         picSmol: BergamotteSmol,
         picMobile: BergamotteMob,
         techs: [techsArr[0], techsArr[1]],
-        desc: "Projet d'intégration réalisé dans le cadre de mon premier partiel en 2ème année à l'ECV Digital Paris. Une maquette Figma nous était fournie, il fallait reproduire le plus fidèlement possible la landing page demandée.\nLe site est conçu entièrement en HTML et CSS, accompagné de Sass comme pré-processeur. Le site complet a été réalisé dans un délai de 4 heures.",
+        desc: "Projet d'intégration réalisé dans le cadre de mon premier partiel en 2ème année à l'ECV Paris. Une maquette Figma nous était fournie, il fallait reproduire le plus fidèlement possible la landing page demandée.\nLe site est conçu entièrement en HTML et CSS, accompagné de Sass comme pré-processeur. Le site complet a été réalisé dans un délai de 4 heures.",
         gitLink: "https://github.com/ArthurJenck/ECV_Bergamotte",
         webLink: "https://arthurjenck.github.io/ECV_Bergamotte/",
     },
@@ -141,7 +144,7 @@ const projectsArr = [
         picSmol: MorpionSmol,
         picMobile: MorpionMob,
         techs: [techsArr[0], techsArr[1], techsArr[2]],
-        desc: "Au cours de mon apprentissage de JavaScript pendant ma 2ème année à l'ECV Digital Paris, j'ai été amené à créer un jeu de Morpion. Ma méthode de création s'est basée sur les classes CSS, ainsi qu'un tableau contenant toutes les conditions de victoire.",
+        desc: "Au cours de mon apprentissage de JavaScript pendant ma 2ème année à l'ECV Paris, j'ai été amené à créer un jeu de Morpion. Ma méthode de création s'est basée sur les classes CSS, ainsi qu'un tableau contenant toutes les conditions de victoire.",
         gitLink: "https://github.com/ArthurJenck/ECV_TicTacToe",
         webLink: "https://arthurjenck.github.io/ECV_TicTacToe/",
     },
@@ -166,6 +169,18 @@ const projectsArr = [
         desc: "3ème projet de mon parcours OpenClassrooms, consistant à intégrer une page de connexion ainsi qu'une modale sur la page d'admin du site d'une designeuse. Une API fournie dans la base de code est liée aux projets, et stockée dans le localStorage.\nJ'ai fait plusieurs ajouts au design de la page, améliorant l'expérience utilisateur, comme des alertes informant la réussite ou l'échec des opérations effectuées.",
         gitLink: "https://github.com/ArthurJenck/OC_SophieBluel",
         webLink: "https://arthurjenck.github.io/OC_SophieBluel/",
+    },
+    {
+        name: "Portfolio",
+        date: new Date("2024-12-10"),
+        picDesk: SpiralfolioDesk,
+        picSmol: SpiralfolioSmol,
+        picMobile: SpiralfolioMob,
+        techs: [techsArr[1], techsArr[2], techsArr[3]],
+        desc: "Le site sur lequel vous vous trouvez actuellement. J'ai commencé à y réfléchir en 2022, pendant ma 2ème année à l'ECV Paris. Entre temps, je notais mes idées de design et de fonctionnalités dans un carnet, dont vous trouverez des images dans le lien ci-dessous, à droite du repository GitHub.\nBien que ce projet ait été réalisé dans le cadre de mon parcours OpenClassrooms, c'est également un projet de cœur reprenant des idées qui ont mûri pendant de nombreux mois. Le site est créé sous React, avec l'intention de le recréer avec Next.js par la suite.",
+        gitLink: "https://github.com/ArthurJenck/Portfolio/",
+        webLink:
+            "https://drive.google.com/drive/folders/1f4fpOMN-B1Bi42T_U0PUSnKu0sPL1yy7",
     },
 ]
 
