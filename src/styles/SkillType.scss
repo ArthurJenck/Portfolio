@@ -4,6 +4,7 @@
     left: 15vw;
     top: 0;
     margin-top: 20svh;
+
     h3 {
         position: -webkit-sticky;
         position: sticky;
@@ -14,6 +15,7 @@
         letter-spacing: 2px;
         min-width: clamp(120px, 14vw, 14vw);
     }
+
     ul {
         list-style-type: none;
         display: flex;
@@ -27,11 +29,13 @@
     @media screen and (max-width: 1024px) {
         margin-top: 5svh;
         left: 5.5vw;
+
         h3 {
             font-size: clamp(1.2rem, 2.5vw, 2.5vw);
             text-align: left;
             min-width: 4rem;
         }
+
         ul {
             gap: 1rem;
             max-width: 58vw;

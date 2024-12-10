@@ -23,6 +23,7 @@
         gap: 4px;
         font-weight: 700;
         letter-spacing: 1px;
+
         p,
         a {
             font-size: clamp(0.85rem, 2vw, 2rem);
@@ -30,6 +31,7 @@
         a {
             text-decoration: none;
             position: relative;
+
             &::after {
                 content: "";
                 width: 100%;

@@ -29,12 +29,15 @@ const SingleProject = ({
     picMobile,
 }: SingleProjectProps) => {
     const ref = useRef<HTMLDivElement>(null)
+    // Par défaut, les projets sont repliés dans l'accordéon
     const [isOpen, setIsOpen] = useState(false)
+    // Dans les descriptions des projets, on remplace \n par des sauts de ligne
     const toUseDesc = desc.split("\n").filter((i) => {
         return i !== ""
     })
 
     useEffect(() => {
+        // On check si l'appareil utilisé est un téléphone ou un ordinateur, pour afficher la photo correcte
         if (useMobile()) {
             ref.current!.style.setProperty(
                 "--project-pic",
@@ -66,12 +69,14 @@ const SingleProject = ({
                         : "projects-item__content"
                 }
             >
+                {/* Si le projet est déplié, cliquer dans le contenu ne doit pas le refermer */}
                 <div
                     className="projects-item__details"
                     onClick={(e) => {
                         isOpen ? e.stopPropagation() : null
                     }}
                 >
+                    {/* On ajoute les tags des technologies utilisées */}
                     <ul className="projects-item__techs">
                         {techs.map((tech) => {
                             return (
@@ -82,9 +87,11 @@ const SingleProject = ({
                             )
                         })}
                     </ul>
+                    {/* On utilise les paragraphes précédemment découpés dans la description */}
                     {toUseDesc.map((paraph, i) => {
                         return <p key={`paraph-${i}`}>{paraph}</p>
                     })}
+                    {/* On vérifie qu'il existe un lien github ou vers le site avant d'afficher le bouton */}
                     <div className="project-item__links">
                         {gitLink ? (
                             <ImgLink
@@ -98,7 +105,20 @@ const SingleProject = ({
                         ) : null}
                     </div>
                 </div>
-                <a href={webLink ? webLink : gitLink} target="_blank">
+                {/* On vérifie qu'au moins un lien soit présent avant de transformer l'image en lien externe */}
+                {webLink || gitLink ? (
+                    <a href={webLink ? webLink : gitLink} target="_blank">
+                        <img
+                            src={picSmol}
+                            alt="Image du projet"
+                            className="projects-item__pic"
+                            // Cliquer sur l'image ne doit pas refermer le projet
+                            onClick={(e) => {
+                                isOpen ? e.stopPropagation() : null
+                            }}
+                        />
+                    </a>
+                ) : (
                     <img
                         src={picSmol}
                         alt="Image du projet"
@@ -107,7 +127,7 @@ const SingleProject = ({
                             isOpen ? e.stopPropagation() : null
                         }}
                     />
-                </a>
+                )}
             </div>
         </article>
     )

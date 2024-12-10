@@ -13,6 +13,7 @@ const ImgLink = (props: { for: string; link?: string; otherAlt?: string }) => {
     let icon = Logo
     let alt = "logo"
 
+    // Les liens sont importés via le .env pour faciliter un éventuel changement d'URL par la suite
     switch (props.for) {
         case "linkedin":
             link = `${import.meta.env.VITE_LINKEDIN_LINK}`
@@ -20,6 +21,7 @@ const ImgLink = (props: { for: string; link?: string; otherAlt?: string }) => {
             alt = "Lien vers mon compte Linkedin"
             break
         case "github":
+            // Pour les projets, un lien spécifique est fourni. On vérifie si ce lien existe, sinon on renvoie le lien GitHub classique
             link = props.link
                 ? props.link
                 : `${import.meta.env.VITE_GITHUB_LINK}`
@@ -45,8 +47,10 @@ const ImgLink = (props: { for: string; link?: string; otherAlt?: string }) => {
     }
 
     return (
+        // Le CV est un cas particulier, la version bureau amenant vers une page différente avec un lecteur de PDF, la version mobile faisant télécharger le document
         <NavLink
             to={props.for === "cv" && useMobile() ? linkMobile : link}
+            // Dans le cas où le composant représente le logo et sert de to-top, on retire le chargement de la page
             onClick={
                 props.for === "logo" && !props.link
                     ? (e) => {

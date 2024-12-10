@@ -9,6 +9,8 @@ const About = ({
     },
 }) => {
     const isMobile = useMobile()
+
+    // En mobile et tablette, l'animation de la spirale est déclenchée au scroll
     const spiralTurnMobile = () => {
         const spiralImg = document.querySelector(
             ".about-content>img"
@@ -16,6 +18,7 @@ const About = ({
         spiralImg.style.transform = `rotate(-${scrollY / 2}deg)`
     }
 
+    // L'écouteur d'événement est ajouté qu'en mobile ou tablette
     useEffect(() => {
         if (isMobile) {
             spiralTurnMobile()
@@ -26,6 +29,7 @@ const About = ({
     return (
         <section
             id="about"
+            // En version tablette, une autre fonction fait tourner la spirale lors du déplacement de la souris
             onMouseMove={
                 !isMobile
                     ? (e) => {

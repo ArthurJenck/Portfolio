@@ -7,6 +7,7 @@ html,
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    // Tout le texte est par défaut dans le blanc spécial des variables colors et dans la font indiquée
     font-family: fonts.$default;
     color: colors.$white;
     scroll-behavior: smooth;
@@ -25,6 +26,7 @@ body {
     }
 }
 
+// Hors mobile, la barre de scroll est stylisée
 @media screen and (min-width: 768px) {
     ::-webkit-scrollbar {
         width: 8px;

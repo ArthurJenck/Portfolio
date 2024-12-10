@@ -1,28 +1,34 @@
 @use "../styles/variables/colors";
 
+// Cette variable est modifiée au déplacement vertical de la souris
 :root {
     --h1-weight: 100;
 }
+
+// Chaque élément apparaît avec un délai légèrement plus élevé
 $base-appear-delay: 0.8s;
 
 header {
+    // 100svh permet d'utiliser le viewport sans UX du navigateur pour la hauteur de la section
     height: 100svh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     scroll-behavior: smooth;
+
     h1 {
         max-width: 50vw;
         text-align: center;
         font-size: 11.5vw;
         line-height: 90%;
         letter-spacing: 2px;
+        // On affiche la font-weight avec la variable
         font-variation-settings: "wght" var(--h1-weight, 800);
-
         opacity: 0;
         animation: appear 0.3s ease-out forwards $base-appear-delay;
 
+        // Le span suivant imite la barre de typing sur le sous-titre du h1
         span {
             max-width: fit-content;
             width: fit-content;
@@ -33,7 +39,6 @@ header {
             font-size: 1.5vw;
             letter-spacing: normal;
             line-height: normal;
-
             opacity: 0;
             animation: appear 0.3s ease-out calc($base-appear-delay + 0.2s)
                     forwards,
@@ -43,6 +48,7 @@ header {
             border-right: solid colors.$white 0.15rem;
         }
     }
+
     .socials {
         display: flex;
         gap: 1.5vw;
@@ -58,14 +64,15 @@ header {
             }
         }
     }
+
     .chevron {
         width: 1.5vw;
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-
         bottom: 0;
         opacity: 0;
+        // Le chevron bouge de haut en bas après son apparition
         animation: appear 0.5s calc($base-appear-delay + 0.6s) forwards,
             floating-chevron 1.5s ease-in-out infinite 0.9s;
         cursor: pointer;
@@ -75,11 +82,14 @@ header {
         h1 {
             font-size: clamp(1rem, 23vw, 100px);
             max-width: 100%;
+            // En tablette et téléphone, il n'y a plus d'animation de font-weight, elle est bloquée en bold
             font-variation-settings: "wght" 700;
+
             span {
                 font-size: clamp(10px, 3.5vw, 1rem);
             }
         }
+
         .socials {
             margin-top: 1.5rem;
             gap: 1.5rem;
@@ -87,6 +97,7 @@ header {
                 width: clamp(1rem, 14.5vw, 4rem);
             }
         }
+
         .chevron {
             width: 2rem;
             animation: appear-chevron-mobile 0.5s
@@ -96,6 +107,7 @@ header {
     }
 }
 
+// Cette animation fait apparaître chaque élément du header
 @keyframes appear {
     from {
         bottom: 0;
@@ -107,6 +119,7 @@ header {
     }
 }
 
+// Cette animation imite le clignotement d'un curseur de texte
 @keyframes typing-cursor {
     from,
     to {
@@ -118,6 +131,7 @@ header {
     }
 }
 
+// Cette animation fait flotter le chevron de haut en bas
 @keyframes floating-chevron {
     from,
     to {
@@ -129,6 +143,7 @@ header {
     }
 }
 
+// Cette animation modifie l'apparition du chevron en mobile et tablette
 @keyframes appear-chevron-mobile {
     from {
         bottom: 0;

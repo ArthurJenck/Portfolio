@@ -6,6 +6,7 @@
     top: calc(25svh);
     left: 4.5vw;
     z-index: 2;
+    // La height est mise à 0 pour cacher l'espace pris dans le flow par le tech-filter
     height: 0;
     display: flex;
     flex-direction: column;
@@ -13,15 +14,18 @@
     align-items: center;
     width: fit-content;
     user-select: none;
+
     button {
         background: none;
         border: none;
         cursor: pointer;
         border-radius: 100%;
+
         img {
             border-radius: 100%;
         }
     }
+
     ul {
         list-style-type: none;
         visibility: hidden;
@@ -32,6 +36,7 @@
         shape-outside: inset(50%);
         gap: 4px;
         transition: 0.2s transform ease-out;
+
         &.open {
             visibility: visible;
             transform: translateY(0);
@@ -43,6 +48,7 @@
             justify-content: center;
             align-items: center;
             cursor: pointer;
+
             img {
                 width: 100%;
                 height: 100%;
@@ -54,9 +60,11 @@
     @media screen and (max-width: 1024px) {
         top: calc(2rem + 11.5vh);
         left: calc(100vw - 3.5rem - 3.5vw);
+
         button img {
             width: 3.5rem;
         }
+
         ul li img {
             width: 2.5rem;
         }
@@ -65,9 +73,11 @@
     @media screen and (max-width: 768px) {
         top: 7rem;
         left: calc(96vw - 2.25rem);
+
         button img {
             width: clamp(3rem, 3.5vw, 3.5vw);
         }
+
         ul li img {
             width: clamp(2rem, 3vw, 3vw);
         }

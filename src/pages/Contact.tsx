@@ -7,10 +7,12 @@ const Contact = ({
         e
     },
 }) => {
+    // Les adresse-mail et numéro de téléphone sont ajoutés dans le .env pour être rapidement modifiés globalement si besoin
     const mail = import.meta.env.VITE_MAIL
     const tel = import.meta.env.VITE_PHONE
 
     return (
+        // La spirale de la section À propos tourne aussi quand la souris se déplace dans la section Contact
         <section
             id="contact"
             onMouseMove={(e) => {
@@ -20,12 +22,14 @@ const Contact = ({
             <h2>On va boire un verre ?</h2>
             <ul className="about-links">
                 <li>
+                    {/* Le lien doit directement permettre d'envoyer un mail */}
                     <a href={`mailto:${mail}`} target="_blank">
                         {mail}
                     </a>
                     <CopyBtn />
                 </li>
                 <li>
+                    {/* Le clic ouvre directement l'application de téléphone */}
                     <a href={`tel:${tel}`}>
                         {tel.replace(/(.{2})/g, "$&" + ".").slice(0, -1)}
                     </a>
@@ -36,6 +40,7 @@ const Contact = ({
                         href={import.meta.env.VITE_LINKEDIN_LINK}
                         target="_blank"
                     >
+                        {/* Avant d'être affichés, on enlève sur cette instance les schémas d'url */}
                         {import.meta.env.VITE_LINKEDIN_LINK.replace(
                             "https://",
                             ""
@@ -47,6 +52,7 @@ const Contact = ({
                 </li>
                 <li>
                     <a href={import.meta.env.VITE_GITHUB_LINK} target="_blank">
+                        {/* Avant d'être affichés, on enlève sur cette instance les schémas d'url */}
                         {import.meta.env.VITE_GITHUB_LINK.replace(
                             "https://",
                             ""

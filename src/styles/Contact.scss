@@ -1,11 +1,13 @@
 @use "./variables/colors";
 
+// Ces données sont beaucoup réutilisées
 $about-links-size: 1.25rem;
 $about-links-size-mobile: 1rem;
 #contact {
     position: relative;
     z-index: 0;
     padding-bottom: 10vh;
+
     .about-links {
         display: flex;
         flex-direction: column;
@@ -13,14 +15,18 @@ $about-links-size-mobile: 1rem;
         list-style-type: none;
         font-size: $about-links-size;
         margin-top: $about-links-size;
+
         li {
             position: relative;
             display: flex;
             margin-top: 3rem;
+
             a {
                 text-decoration: none;
                 font-weight: 700;
             }
+
+            // Les before sont les barres verticales au-dessus de chaque élément de contact
             &::before {
                 content: "";
                 width: 1px;
@@ -32,6 +38,7 @@ $about-links-size-mobile: 1rem;
                 left: 50%;
                 transform: translateX(-50%);
             }
+            // Les after sont les barres horizontales en-dessous de chaque élément, collées au before suivant
             &::after {
                 content: "";
                 width: 100%;
@@ -40,6 +47,8 @@ $about-links-size-mobile: 1rem;
                 position: absolute;
                 bottom: 0;
             }
+
+            // Au hover, on augmente la taille de sélection des éléments avec un autre pseudo-élément
             &:hover {
                 a::after {
                     content: "";
@@ -50,6 +59,8 @@ $about-links-size-mobile: 1rem;
                     top: 0;
                     background-color: none;
                 }
+
+                // Et on affiche le bouton servant à copier le texte
                 .about-links__copy {
                     display: block;
                     cursor: pointer;
@@ -57,27 +68,34 @@ $about-links-size-mobile: 1rem;
             }
         }
     }
+
     @media screen and (max-width: 768px) {
         padding-bottom: 4rem;
+
         h2 {
             max-width: 65vw;
             left: 1.5rem;
             transform: none;
         }
+
         .about-links {
             align-items: flex-start;
             margin-left: 13vw;
             font-size: $about-links-size-mobile;
             margin-top: $about-links-size-mobile;
+
             li {
+                // En mobile, les boutons de copie de texte sont toujours affichés
                 .about-links__copy {
                     display: block;
                 }
+
                 &:hover {
                     a::after {
                         content: none;
                     }
                 }
+
                 &::before {
                     left: 0;
                     transform: none;

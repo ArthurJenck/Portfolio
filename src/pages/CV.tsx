@@ -6,6 +6,7 @@ const CV = () => {
         document.body.style.overflow = "hidden"
     }, [])
     return (
+        // Le zoom n'a pas besoin d'être au-dessus de 25%
         <iframe
             src="/CV Arthur Jenck.pdf#zoom=25"
             width={"100%"}

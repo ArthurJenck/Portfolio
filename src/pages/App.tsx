@@ -9,9 +9,12 @@ import { useState } from "react"
 import Footer from "../components/Footer"
 
 const App = () => {
+    // La fonction de rotation de la spirale de la section À propos est située ici pour être transmise également à la section Contact. Par défaut, la rotation est à 0
     const [spiralRotate, setSpiralRotate] = useState(0)
     const spiralTurn = () => {
+        // On fait tourner la spirale de 2 degrés anti-horaire à chaque lancement de la fonction
         setSpiralRotate(spiralRotate - 2)
+        // Une fois un tour complet effectué, on repasse à 0 pour éviter d'avoir des nombres trop grands
         spiralRotate === -360 ? setSpiralRotate(0) : null
         const spiralImg = document.querySelector(
             ".about-content>img"

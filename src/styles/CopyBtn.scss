@@ -1,5 +1,6 @@
 .about-links__copy {
     display: none;
+    // L'icone est noire par défaut, ce filtre permet de transformer la couleur en blanc
     filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(264deg)
         brightness(99%) contrast(103%);
     width: 0.85rem;

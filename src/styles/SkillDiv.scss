@@ -2,21 +2,26 @@
     display: flex;
     gap: 2.5vw;
     align-items: center;
+
     img {
         width: 5vw;
         height: 5vw;
     }
+
     p {
         font-size: 1.25vw;
     }
+
     @media screen and (max-width: 1024px) {
         flex-direction: column;
         align-items: flex-start;
         gap: 4px;
+
         img {
             width: clamp(1.5rem, 3.5vw, 3.5vw);
             height: clamp(1.5rem, 3.5vw, 3.5vw);
         }
+
         p {
             font-size: clamp(1rem, 2vw, 2vw);
         }

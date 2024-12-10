@@ -6,8 +6,11 @@
 .socials-link {
     transition: transform 0.2s ease-out;
 
+    // Au hover, les boutons grossissent légèrement
     &:hover {
         transform: scale(1.2);
+
+        // Mais pas en mobile et tablette
         @media screen and (max-width: 768px) {
             transform: scale(1);
         }

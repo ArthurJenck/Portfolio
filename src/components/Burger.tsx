@@ -4,18 +4,25 @@ import "../styles/Burger.scss"
 import { useScroll } from "../hooks"
 
 const Burger = () => {
+    // Checker si le menu Burger est ouvert ou non
     const [isOpen, setIsOpen] = useState(false)
 
     return (
+        // S'il est ouvert, le menu burger obtient la class open
         <div className={isOpen ? "burger open" : "burger"}>
+            {/* Le toggle du burger change l'état au clic */}
             <div className="burger-toggle" onClick={() => setIsOpen(!isOpen)}>
+                {/* Le span suivant correspond à la barre centrale du burger */}
                 <span></span>
+                {/* Le span suivant servira de fond au menu burger une fois ouvert */}
                 <span className="burger-background"></span>
-            </div>{" "}
+            </div>
+            {/* Cliquer sur le background du menu burger doit le fermer */}
             <div className="burger-menu" onClick={() => setIsOpen(!isOpen)}>
                 <ImgLink for="logo" />
                 <ul>
                     <li>
+                        {/* Le preventDefault sert à éviter le rechargement de la page en cliquant sur le lien. On utilise alors le hook fait maison useScroll pour remonter en haut de la page et nettoyer l'url */}
                         <a
                             href="/"
                             onClick={(e) => {

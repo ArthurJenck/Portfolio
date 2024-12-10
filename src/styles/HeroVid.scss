@@ -6,5 +6,6 @@
     top: 0;
     left: 0;
     z-index: -1;
+    // Ce filtre diminue l'opacité de la vidéo pour rendre le texte au premier-plan plus lisible
     filter: brightness(30%);
 }

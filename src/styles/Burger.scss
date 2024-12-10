@@ -10,7 +10,7 @@
         position: relative;
         cursor: pointer;
 
-        // Sert pour agrandir la zone de hover
+        // Sert à agrandir la zone de hover
         &::before {
             content: "";
             width: 5rem;
@@ -20,6 +20,8 @@
             left: 50%;
             transform: translate(-50%, -50%);
         }
+
+        // Le after est affiché au clic
         &::after {
             content: "";
             position: absolute;
@@ -33,6 +35,7 @@
             transition: width 0.2s ease-out, height 0.2s ease-out;
         }
 
+        // Ce span désigne la barre du milieu du bouton burger
         span:not(.burger-background) {
             z-index: 6;
             display: block;
@@ -42,6 +45,8 @@
             display: block;
             border-radius: 100vw;
             transition: transform 0.2s ease-in-out;
+
+            // Les before et after sont les barres du haut et du bas du bouton burger
             &::before,
             &::after {
                 content: "";
@@ -61,6 +66,7 @@
             }
         }
 
+        // On affiche le fond du menu burger qu'au hover
         .burger-background {
             width: 0;
             height: 0;
@@ -78,6 +84,8 @@
             height: 6rem;
         }
     }
+
+    // Le menu n'est affiché qu'avec la classe open
     .burger-menu {
         position: fixed;
         top: 50%;
@@ -111,6 +119,7 @@
                 position: relative;
                 user-select: none;
 
+                // Les barres sous les liens sont créées en pseudo-éléments, permettant plus de contrôle sur les animations au hover
                 &::after {
                     content: "";
                     display: block;
@@ -126,6 +135,7 @@
                 }
             }
         }
+
         .socials {
             display: flex;
             gap: 0.75rem;
@@ -138,7 +148,9 @@
             }
         }
     }
+
     &.open {
+        // Une fois le menu ouvert, on fait tourner les barres du bouton avec une petite animation pour former une croix
         .burger-toggle span:not(.burger-background) {
             transform: rotate(45deg);
             &::before {
@@ -150,18 +162,23 @@
                 top: 0;
             }
         }
+
+        // Le after prend maintenant tout l'écran
         .burger-toggle::after {
             width: 400vw;
             height: 400vw;
             transition-duration: 0.5s;
             cursor: default;
         }
+
+        // Le menu s'affiche
         .burger-menu {
             opacity: 1;
             visibility: visible;
             transition: visibility 0.2s ease-out, opacity 0.2s ease-out;
         }
     }
+
     @media screen and (max-width: 1024px) {
         .burger-toggle {
             span:not(.burger-background) {
@@ -174,6 +191,7 @@
                     top: 8px;
                 }
             }
+
             &:hover > .burger-background {
                 animation: 0;
                 width: 0;
@@ -182,6 +200,7 @@
         }
 
         &.open .burger-toggle {
+            // On passe les vw en vh, qui est maintenant l'unité de mesure la plus grande
             &::after {
                 width: 400vh;
                 height: 400vh;
@@ -190,6 +209,7 @@
     }
 }
 
+// Cette animation modifie le comportement d'apparition du cercle de fond au hover du bouton
 @keyframes burger-background-bounce {
     0% {
         width: 0;

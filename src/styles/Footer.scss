@@ -12,14 +12,17 @@ footer {
     img[alt="logo"] {
         height: 4rem;
     }
+
     p {
         font-size: 1rem;
         font-weight: 700;
         letter-spacing: 1px;
+
         span {
             display: block;
         }
     }
+
     a {
         display: flex;
         justify-content: center;
@@ -32,20 +35,25 @@ footer {
         justify-content: center;
         align-items: center;
         gap: 0.5rem;
+
         img {
             width: 2rem;
         }
     }
+
     @media screen and (max-width: 768px) {
         padding: 1rem 0;
         flex-direction: column;
         gap: 0.5rem;
+
         img[alt="logo"] {
             width: 2.5rem;
         }
+
         p {
             text-align: center;
         }
+
         .socials {
             position: relative;
             right: 0;

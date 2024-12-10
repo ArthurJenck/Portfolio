@@ -17,12 +17,15 @@
     li {
         position: relative;
         border-radius: 100%;
+
         a {
             display: block;
             border-radius: 100%;
             width: 2.5vw;
             aspect-ratio: 1/1;
             border: 2px solid colors.$white;
+
+            // Les before indiquent le hover
             &::before {
                 content: "";
                 width: 2.5vw;
@@ -35,12 +38,16 @@
                 clip-path: polygon(100% 100%, 100% 100%, 100% 100%);
                 transition: clip-path 0.2s ease-out;
             }
+            // Le clip-path les affiche au hover
             &:hover::before {
                 clip-path: polygon(100% 0, 0 100%, 100% 100%);
             }
+            // La section actuellement affichée a elle aussi droit à un before même sans hover
             &.current::before {
                 clip-path: polygon(100% 0, 0 100%, 100% 100%);
             }
+
+            // Les after sont des demi-cercle indiquant la section actuellement visionnée
             &::after {
                 content: "";
                 width: 2.5vw;
@@ -53,10 +60,13 @@
                 clip-path: polygon(0 0, 0 0, 0 0);
                 transition: clip-path 0.2s ease-out;
             }
+            // Le pseudo-élément n'est affichée qu'avec la bonne classe
             &.current::after {
                 clip-path: polygon(0 0, 0% 105%, 105% 0);
             }
         }
+
+        // Chaque cercle a un before apparaissant au hover et montrant le titre de la section survolée
         &::before {
             content: "Accueil";
             position: absolute;
@@ -86,6 +96,8 @@
             opacity: 1;
             right: 3.5vw;
         }
+
+        // Ces after sont les barres verticales entre chaque cercle
         &::after {
             content: "";
             width: 2px;
@@ -98,6 +110,8 @@
             display: none;
         }
     }
+
+    // En tablette et mobile, ce composant n'est pas affiché
     @media screen and (max-width: 1024px) {
         display: none;
     }

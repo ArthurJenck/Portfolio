@@ -25,6 +25,7 @@ const HeroVid = () => {
                 player.setAttribute("muted", "")
                 player.autoplay = true
 
+                // On vérifie si la vidéo se joue bien, sinon on affiche l'image de remplacement
                 setTimeout(() => {
                     player
                         .play()
@@ -38,6 +39,7 @@ const HeroVid = () => {
         }
     }, [])
 
+    // Selon si on devrait utiliser l'image ou non, on affiche soit le placeholder soit la vidéo
     return shouldUseImg ? (
         <img src={PlaceHolder} className="hero-bg" alt="Image de fond" />
     ) : (
@@ -58,20 +60,6 @@ const HeroVid = () => {
             }}
         ></div>
     )
-}
-
-{
-    /* <div
-            ref={ref}
-            dangerouslySetInnerHTML={{
-                __html: `
-            <video class="hero-bg" autoplay muted loop>
-            <source src=${BG_Webm} type="video/webm" />
-            <source src=${BG_Mp4} type="video/mp4" />
-        </video>
-            `,
-            }}
-        ></div> */
 }
 
 export default HeroVid
