@@ -42,15 +42,15 @@ const About = ({
                     <h3>Je sais centrer une div</h3>
                     <p>
                         Fou amoureux du développement web, j'y pense le jour et
-                        j'en rêve la nuit. Lorem ipsum dolor sit amet,
-                        consectetur adipiscing elit. Quisque gravida leo non
-                        facilisis fermentum. Nulla facilisi. Vivamus ac erat
-                        eget nisl sodales porta.
+                        j'en rêve la nuit. Ma relation avec le dev a débuté il y
+                        a plusieurs années, et ma soif d'apprendre s'intensifie
+                        au fil du savoir que j'assimile.
                     </p>
                     <p>
-                        Mauris sed dignissim arcu. Donec rutrum nisi ut neque
-                        viverra ultrices. Aussi, je consomme des spaghettis
-                        bolognaises en quantités inquiétantes.
+                        Né en 2002, en région parisienne, je suis aussi grand
+                        adepte du cinéma thriller, d'escalade, de natation et de
+                        spaghettis bolognaises que je consomme en quantités
+                        inquiétantes.
                     </p>
                 </div>
             </div>
