@@ -20,6 +20,7 @@ nav {
 
     img {
         height: 11.5svh;
+        width: 5vw;
         transition: opacity 0.2s;
         pointer-events: none;
     }
@@ -27,9 +28,9 @@ nav {
     @media screen and (max-width: 768px) {
         height: 4rem;
         .logo-link {
-            // visibility: hidden;
             img {
                 height: 10vh;
+                width: auto;
             }
         }
     }
