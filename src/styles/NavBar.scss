@@ -14,13 +14,13 @@ nav {
         pointer-events: all;
     }
 
-    .logo-link {
+    & > .logo-link {
         transition: 0.2s opacity;
+        width: 5vw;
     }
 
     img {
         height: 11.5svh;
-        width: 5vw;
         transition: opacity 0.2s;
         pointer-events: none;
     }
