@@ -6,6 +6,7 @@ import Projets from "../pages/Projets"
 import About from "./About"
 import Contact from "./Contact"
 import { useState } from "react"
+import Footer from "../components/Footer"
 
 const App = () => {
     const [spiralRotate, setSpiralRotate] = useState(0)
@@ -27,6 +28,7 @@ const App = () => {
             <Projets />
             <About spiralTurn={spiralTurn} />
             <Contact spiralTurn={spiralTurn} />
+            <Footer />
         </>
     )
 }

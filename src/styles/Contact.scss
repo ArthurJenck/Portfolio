@@ -5,7 +5,7 @@ $about-links-size-mobile: 1rem;
 #contact {
     position: relative;
     z-index: 0;
-    padding-bottom: 12vh;
+    padding-bottom: 10vh;
     .about-links {
         display: flex;
         flex-direction: column;
@@ -58,6 +58,7 @@ $about-links-size-mobile: 1rem;
         }
     }
     @media screen and (max-width: 768px) {
+        padding-bottom: 4rem;
         h2 {
             max-width: 65vw;
             left: 1.5rem;
