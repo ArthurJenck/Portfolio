@@ -1,5 +1,5 @@
-import { lazy, useState } from "react"
-const SingleProject = lazy(() => import("../components/SingleProject"))
+import { useState } from "react"
+import SingleProject from "../components/SingleProject"
 import TechFilter, { techArrayProps } from "../components/TechFilter"
 import techsAndProjects from "../data/projects"
 import "../styles/Projets.scss"
