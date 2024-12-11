@@ -5,6 +5,7 @@
     background-color: colors.$main;
     position: relative;
 
+    // After servant à éviter un bug d'affichage dans le background-color entre deux sections
     &::after {
         content: "";
         position: absolute;

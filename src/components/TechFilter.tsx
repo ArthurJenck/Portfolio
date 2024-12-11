@@ -1,7 +1,7 @@
 import { Dispatch, SetStateAction, useEffect, useState } from "react"
 import filterIcon from "../assets/icons/techs/filter-icon.svg"
 import "../styles/TechFilter.scss"
-import { useIsMounted } from "../hooks"
+import { useDebounce, useIsMounted } from "../hooks"
 
 interface TechFilterProps {
     toUseTechs: techArrayProps[]
@@ -30,6 +30,34 @@ const TechFilter = ({
     const [isOpen, setIsOpen] = useState(false)
     // On crée un nouveau tableau à partir de l'initial pour ne pas perdre la base
     const updatedTechArr = [...toUseTechs]
+    // UseState pour cacher le tech-filter un peu avant la section suivante
+    const [isHidden, setIsHidden] = useState(false)
+
+    const checkAreProjectsViewed = () => {
+        if (
+            scrollY <
+            document.querySelector<HTMLElement>("#about")!.offsetTop -
+                window.innerHeight / 4 -
+                80
+        ) {
+            setIsHidden(false)
+        } else {
+            setIsHidden(true)
+        }
+    }
+
+    useEffect(() => {
+        checkAreProjectsViewed
+    }, [isMounted.current])
+
+    const debouncedCheckAreProjectsViewed = useDebounce(
+        checkAreProjectsViewed,
+        10
+    )
+
+    window.addEventListener("scroll", debouncedCheckAreProjectsViewed, {
+        passive: true,
+    })
 
     // Au chargement du composant, on indique qu'il faut utiliser le tableau initial de techs à utiliser
     useEffect(() => {
@@ -60,7 +88,7 @@ const TechFilter = ({
     }
 
     return (
-        <div className="tech-filter">
+        <div className={isHidden ? "tech-filter hidden" : "tech-filter"}>
             <button
                 onClick={() => {
                     setIsOpen(!isOpen)

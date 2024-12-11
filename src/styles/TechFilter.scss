@@ -15,6 +15,13 @@
     width: fit-content;
     user-select: none;
 
+    &.hidden {
+        opacity: 0;
+        * {
+            visibility: hidden;
+        }
+    }
+
     button {
         background: none;
         border: none;
