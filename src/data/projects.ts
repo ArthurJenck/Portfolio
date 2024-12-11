@@ -177,7 +177,7 @@ const projectsArr = [
         picSmol: SpiralfolioSmol,
         picMobile: SpiralfolioMob,
         techs: [techsArr[1], techsArr[2], techsArr[3]],
-        desc: "Le site sur lequel vous vous trouvez actuellement. J'ai commencé à y réfléchir en 2022, pendant ma 2ème année à l'ECV Paris. Entre temps, je notais mes idées de design et de fonctionnalités dans un carnet, dont vous trouverez des images dans le lien ci-dessous, à droite du repository GitHub.\nBien que ce projet ait été réalisé dans le cadre de mon parcours OpenClassrooms, c'est également un projet de cœur reprenant des idées qui ont mûri pendant de nombreux mois. Le site est créé sous React, avec l'intention de le recréer avec Next.js par la suite.",
+        desc: "Le site sur lequel vous vous trouvez actuellement. J'ai commencé à y réfléchir en 2022, pendant ma 2ème année à l'ECV Paris. Entre temps, je notais mes idées de design et de fonctionnalités dans un carnet, dont vous trouverez des images dans le lien ci-dessous, à droite du repository GitHub. Vous remarquerez qu'à l'époque, il était prévu que le site soit une représentation de la forme qu'est la Spirale, idée diminuée pour garder le site lisible\nBien que ce projet ait été réalisé dans le cadre de mon parcours OpenClassrooms, c'est également un projet de cœur reprenant des idées qui ont mûri pendant de nombreux mois. Le site est créé sous React, avec l'intention de le recréer avec Next.js par la suite.",
         gitLink: "https://github.com/ArthurJenck/Portfolio/",
         webLink:
             "https://drive.google.com/drive/folders/1f4fpOMN-B1Bi42T_U0PUSnKu0sPL1yy7",

@@ -7,6 +7,7 @@ $about-links-size-mobile: 1rem;
     position: relative;
     z-index: 0;
     padding-bottom: 10vh;
+    background-color: colors.$main;
 
     .about-links {
         display: flex;

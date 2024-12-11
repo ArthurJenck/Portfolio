@@ -38,7 +38,6 @@ const About = ({
                     : () => {}
             }
         >
-            <span className="about-top"></span>
             <h2>À propos</h2>
             <div className="about-content">
                 <img src={spiral} aria-hidden />
