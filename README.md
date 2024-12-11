@@ -1,6 +1,6 @@
-<p align="center">
+<a href="https://arthurjenck.com/" align="center">
   <img src="https://i.ibb.co/R4tzqky/logo.png" width="75">
-</p>
+</a>
 
 <h3 align="center"><a href="https://arthurjenck.com/">arthurjenck.com</a></h3>
 
@@ -47,7 +47,8 @@ Puis lancez le projet avec :
 ### Futurs ajouts
 
 Mode clair / sombre  
-Version ENG / FR
+Version ENG / FR  
+Re-création sous Next.js
 
 ### Liens utiles
 
@@ -57,8 +58,9 @@ Lien Google Drive contenant les scans de mon carnet : [drive.google.com/drive/fo
 ### Dates du projet
 
 Premières réflexions en 2023  
-Début du design de la maquette le 30 octobre 2024
-Début du eéveloppement le 15 novembre 2024
+Début du design de la maquette le 30 octobre 2024  
+Début du développement le 15 novembre 2024  
+Fin officielle du développement le 11 décembre 2024 (modifications régulières)
 
 ### Auteur
 
