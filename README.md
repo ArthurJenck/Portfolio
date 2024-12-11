@@ -1,6 +1,8 @@
-<a href="https://arthurjenck.com/" align="center">
+<p align="center">
+<a href="https://arthurjenck.com/">
   <img src="https://i.ibb.co/R4tzqky/logo.png" width="75">
 </a>
+</p>
 
 <h3 align="center"><a href="https://arthurjenck.com/">arthurjenck.com</a></h3>
 
