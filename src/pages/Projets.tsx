@@ -1,12 +1,11 @@
 import { useState } from "react"
 import SingleProject from "../components/SingleProject"
 import TechFilter, { techArrayProps } from "../components/TechFilter"
-import techsAndProjects from "../data/projects"
+import { projectsArr } from "../data/projects"
+import { techsArr } from "../data/techs"
 import "../styles/Projets.scss"
 
 const Projets = () => {
-    // On crée le tableau de projets à partir de celui fourni par le fichier.json
-    const projectsArr = [...techsAndProjects.projectsArr]
     // On trie ensuite ces projets par date
     const datedProjects = projectsArr.sort((a, b) => {
         return b.date.getTime() - a.date.getTime()
@@ -14,7 +13,7 @@ const Projets = () => {
 
     // Les techs sont récupérées et triées par ordre d'apparition (indiqué manuellement dans les données d'objet)
     const baseTechs = [
-        ...techsAndProjects.techsArr.sort((a, b) => {
+        ...techsArr.sort((a, b) => {
             return a.order - b.order
         }),
     ]
