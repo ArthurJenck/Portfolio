@@ -11,7 +11,7 @@ const ImgLink = (props: { for: string; link?: string; otherAlt?: string }) => {
     let link = "/"
     let linkMobile = ""
     let icon = Logo
-    let alt = "logo"
+    let alt = "Logo blanc"
 
     // Les liens sont importés via le .env pour faciliter un éventuel changement d'URL par la suite
     switch (props.for) {

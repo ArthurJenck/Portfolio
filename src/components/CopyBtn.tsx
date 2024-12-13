@@ -27,6 +27,8 @@ const CopyBtn = () => {
             src={copyIcon}
             className="about-links__copy"
             onClick={(e) => handleCopyClick(e)}
+            aria-hidden
+            alt=""
         ></img>
     )
 }

@@ -81,7 +81,7 @@ const SingleProject = ({
                         {techs.map((tech) => {
                             return (
                                 <li key={tech.title}>
-                                    <img src={tech.icon} aria-hidden />
+                                    <img src={tech.icon} alt="" aria-hidden />
                                     <span>{tech.title}</span>
                                 </li>
                             )

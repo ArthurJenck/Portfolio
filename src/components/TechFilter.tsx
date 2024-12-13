@@ -93,8 +93,9 @@ const TechFilter = ({
                 onClick={() => {
                     setIsOpen(!isOpen)
                 }}
+                aria-label="Filtres des projets"
             >
-                <img src={filterIcon} aria-hidden />
+                <img src={filterIcon} alt="" aria-hidden />
             </button>
             <ul className={isOpen ? "open" : ""}>
                 {toUseTechs.map((tech) => {
@@ -113,6 +114,7 @@ const TechFilter = ({
                                         ? tech.inactiveIcon
                                         : tech.activeIcon
                                 }
+                                alt=""
                                 aria-hidden
                             />
                         </li>

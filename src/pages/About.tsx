@@ -40,7 +40,7 @@ const About = ({
         >
             <h2>À propos</h2>
             <div className="about-content">
-                <img src={spiral} aria-hidden />
+                <img src={spiral} alt="" aria-hidden />
                 <div className="about-content__text">
                     <h3>Je sais centrer une div</h3>
                     <p>

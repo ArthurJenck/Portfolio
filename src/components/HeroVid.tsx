@@ -23,7 +23,6 @@ const HeroVid = () => {
                 player.playsInline = true
                 player.muted = true
                 player.setAttribute("muted", "")
-                player.autoplay = true
 
                 // On vérifie si la vidéo se joue bien, sinon on affiche l'image de remplacement
                 setTimeout(() => {
@@ -53,6 +52,7 @@ const HeroVid = () => {
                 autoplay
                 playsinline
                 class="hero-bg"
+                aria-hidden="true"
                 >
                 <source src="${BG_Webm}" type="video/webm" />
                 <source src="${BG_Mp4}" type="video/mp4" />

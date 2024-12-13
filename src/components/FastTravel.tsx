@@ -95,6 +95,7 @@ const FastTravel = () => {
                         useScroll(0)
                     }}
                     className={currentSection === "accueil" ? "current" : ""}
+                    aria-label="lien vers accueil"
                 ></a>
             </li>
             {/* Selon la section devant être indiquée par le composant est ajoutée en class et sera stylisée par le SCSS */}
@@ -102,24 +103,28 @@ const FastTravel = () => {
                 <a
                     href="#skills"
                     className={currentSection === "skills" ? "current" : ""}
+                    aria-label="lien vers compétences"
                 ></a>
             </li>
             <li>
                 <a
                     href="#projets"
                     className={currentSection === "projets" ? "current" : ""}
+                    aria-label="lien vers projets"
                 ></a>
             </li>
             <li>
                 <a
                     href="#about"
                     className={currentSection === "about" ? "current" : ""}
+                    aria-label="lien vers à propos"
                 ></a>
             </li>
             <li>
                 <a
                     href="#contact"
                     className={currentSection === "contact" ? "current" : ""}
+                    aria-label="lien vers contact"
                 ></a>
             </li>
         </ul>
