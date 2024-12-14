@@ -35,6 +35,8 @@ const SingleProject = ({
     const toUseDesc = desc.split("\n").filter((i) => {
         return i !== ""
     })
+    // On regarde si l'appareil est mobile ou tablette pour sélectionner où mettre le onClick
+    const isMobile = useMobile()
 
     useEffect(() => {
         // On check si l'appareil utilisé est un téléphone ou un ordinateur, pour afficher la photo correcte
@@ -57,11 +59,18 @@ const SingleProject = ({
             className={isOpen ? "projects-item open" : "projects-item"}
             ref={ref}
             onClick={() => {
-                setIsOpen(!isOpen)
+                isMobile ? setIsOpen(!isOpen) : setIsOpen(false)
             }}
         >
             <span className="project-top"></span>
-            <h3>{name}</h3>
+            <h3
+                onClick={(e) => {
+                    e.stopPropagation()
+                    !isMobile && setIsOpen(!isOpen)
+                }}
+            >
+                {name}
+            </h3>
             <div
                 className={
                     isOpen
