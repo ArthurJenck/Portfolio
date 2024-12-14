@@ -4,6 +4,7 @@
     // Le overflow-y est nécessaire pour cacher les projets au-dessus
     background-color: colors.$main;
     position: relative;
+    padding-bottom: 10vh;
 
     // After servant à éviter un bug d'affichage dans le background-color entre deux sections
     &::after {
