@@ -66,7 +66,7 @@ const SingleProject = ({
             <h3
                 onClick={(e) => {
                     e.stopPropagation()
-                    !isMobile && setIsOpen(!isOpen)
+                    setIsOpen(!isOpen)
                 }}
             >
                 {name}
