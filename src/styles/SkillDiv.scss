@@ -8,6 +8,10 @@
         height: 5vw;
     }
 
+    h4 {
+        font-size: 1.5vw;
+    }
+
     p {
         font-size: 1.25vw;
     }
@@ -20,6 +24,10 @@
         img {
             width: clamp(1.5rem, 3.5vw, 3.5vw);
             height: clamp(1.5rem, 3.5vw, 3.5vw);
+        }
+
+        h4 {
+            font-size: clamp(1.25rem, 2.25vw, 2.25vw);
         }
 
         p {
