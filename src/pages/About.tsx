@@ -47,7 +47,10 @@ const About = ({
                         Fou amoureux du développement web, j'y pense le jour et
                         j'en rêve la nuit. Ma relation avec le dev a débuté il y
                         a plusieurs années, et ma soif d'apprendre s'intensifie
-                        au fil du savoir que j'assimile.
+                        au fil du savoir que j'assimile. Mon parcours à l'ECV
+                        Paris en tant que Chef de Projet Digital, ainsi que mon
+                        parcours OpenClassrooms de Développeur Web m'ont permis
+                        de déployer mes ailes.
                     </p>
                     <p>
                         Né en 2002, en région parisienne, je suis aussi grand
