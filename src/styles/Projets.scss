@@ -4,4 +4,22 @@
     h2 {
         margin-bottom: 3rem;
     }
+
+    .no-proj-shown {
+        margin: 0 auto;
+        max-width: 65vw;
+        text-align: center;
+        button {
+            border: none;
+            background-color: transparent;
+            text-decoration: underline;
+            font-size: 1.25vw;
+            cursor: pointer;
+
+            @media screen and (max-width: 768px) {
+                font-size: 1rem;
+                margin-top: 1rem;
+            }
+        }
+    }
 }

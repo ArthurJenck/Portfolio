@@ -25,6 +25,8 @@ const Projets = () => {
     // Les techs indiquées comme actives et donc comme filtres seront ajoutées dans ce tableau
     const activeTechs = [] as Array<techArrayProps>
 
+    let noProjShown = true
+
     return (
         <section id="projets">
             <h2>Projets</h2>
@@ -45,6 +47,7 @@ const Projets = () => {
                     activeTechs.every((tech) => project.techs.includes(tech)) ||
                     noFiltersClicked
                 ) {
+                    noProjShown = false
                     return (
                         <SingleProject
                             key={`projet-${index}`}
@@ -60,6 +63,16 @@ const Projets = () => {
                     )
                 }
             })}
+            {noProjShown ? (
+                <div className="no-proj-shown">
+                    <p>
+                        Aucun projet disponible pour les filtres sélectionnés.
+                    </p>
+                    <button onClick={() => setNoFiltersClicked(true)}>
+                        Réinitialiser les filtres
+                    </button>
+                </div>
+            ) : null}
         </section>
     )
 }
