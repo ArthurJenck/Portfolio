@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { Sora } from "next/font/google"
 import "./globals.scss"
+import Navbar from "@/components/NavBar/Navbar"
 
 const soraSans = Sora({
   variable: "--font-sora",
@@ -35,7 +36,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
-      <body className={`${soraSans.variable}`}>{children}</body>
+      <body className={`${soraSans.variable}`}>
+        <Navbar />
+        {children}
+      </body>
     </html>
   )
 }
