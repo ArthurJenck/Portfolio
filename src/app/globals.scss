@@ -1,0 +1,37 @@
+@use "./colors.scss";
+
+html,
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  // Tout le texte est par défaut dans le blanc spécial des variables colors et dans la font indiquée
+  font-family: var(--font-sora);
+  color: colors.$white;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: colors.$primaryColor;
+  h2 {
+    font-size: clamp(2rem, 5vw, 5vw);
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    width: fit-content;
+    letter-spacing: 2px;
+  }
+}
+
+// Hors mobile, la barre de scroll est stylisée
+@media screen and (min-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 8px;
+    background-color: rgba(0, 0, 0, 0);
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: colors.$white;
+    border-radius: 5px;
+  }
+}
