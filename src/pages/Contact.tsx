@@ -19,7 +19,7 @@ const Contact = ({
                 spiralTurn(e)
             }}
         >
-            <h2>On prend un café ?</h2>
+            <h2>On va boire un verre ?</h2>
             <ul className="about-links">
                 <li>
                     {/* Le lien doit directement permettre d'envoyer un mail */}
