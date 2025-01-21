@@ -16,15 +16,13 @@ const ImgLink = (props: { for: string; link?: string; otherAlt?: string }) => {
     // Les liens sont importés via le .env pour faciliter un éventuel changement d'URL par la suite
     switch (props.for) {
         case "linkedin":
-            link = `${import.meta.env.VITE_LINKEDIN_LINK}`
+            link = "https://www.linkedin.com/in/arthurjenck/"
             icon = linkedinIcon
             alt = "Lien vers mon compte Linkedin"
             break
         case "github":
             // Pour les projets, un lien spécifique est fourni. On vérifie si ce lien existe, sinon on renvoie le lien GitHub classique
-            link = props.link
-                ? props.link
-                : `${import.meta.env.VITE_GITHUB_LINK}`
+            link = props.link ? props.link : "https://github.com/ArthurJenck/"
             icon = githubIcon
             props.otherAlt
                 ? (alt = props.otherAlt)

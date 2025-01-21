@@ -7,9 +7,10 @@ const Contact = ({
         e
     },
 }) => {
-    // Les adresse-mail et numéro de téléphone sont ajoutés dans le .env pour être rapidement modifiés globalement si besoin
-    const mail = import.meta.env.VITE_MAIL
-    const tel = import.meta.env.VITE_PHONE
+    const mail = "contact@arthurjenck.com"
+    const tel = "0610790509"
+    const linkedinLink = "https://www.linkedin.com/in/arthurjenck/"
+    const githubLink = "https://github.com/ArthurJenck/"
 
     return (
         // La spirale de la section À propos tourne aussi quand la souris se déplace dans la section Contact
@@ -36,27 +37,20 @@ const Contact = ({
                     <CopyBtn />
                 </li>
                 <li>
-                    <a
-                        href={import.meta.env.VITE_LINKEDIN_LINK}
-                        target="_blank"
-                    >
+                    <a href={linkedinLink} target="_blank">
                         {/* Avant d'être affichés, on enlève sur cette instance les schémas d'url */}
-                        {import.meta.env.VITE_LINKEDIN_LINK.replace(
-                            "https://",
-                            ""
-                        )
+                        {linkedinLink
+                            .replace("https://", "")
                             .replace("www.", "")
                             .slice(0, -1)}
                     </a>
                     <CopyBtn />
                 </li>
                 <li>
-                    <a href={import.meta.env.VITE_GITHUB_LINK} target="_blank">
+                    <a href={githubLink} target="_blank">
                         {/* Avant d'être affichés, on enlève sur cette instance les schémas d'url */}
-                        {import.meta.env.VITE_GITHUB_LINK.replace(
-                            "https://",
-                            ""
-                        )
+                        {githubLink
+                            .replace("https://", "")
                             .replace("www.", "")
                             .slice(0, -1)}
                     </a>
