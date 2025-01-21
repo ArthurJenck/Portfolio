@@ -15,10 +15,7 @@ const App = () => {
         // On fait tourner la spirale de 2 degrés anti-horaire à chaque lancement de la fonction
         setSpiralRotate(spiralRotate - 2)
         // Une fois un tour complet effectué, on repasse à 0 pour éviter d'avoir des nombres trop grands
-        if (spiralRotate === -360) {
-            setSpiralRotate(0)
-        }
-
+        spiralRotate === -360 ? setSpiralRotate(0) : null
         const spiralImg = document.querySelector(
             ".about-content>img"
         ) as HTMLImageElement
