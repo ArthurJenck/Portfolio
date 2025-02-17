@@ -1,9 +1,11 @@
 import htmlIcon from "../assets/icons/skills/html-icon.svg"
 import cssIcon from "../assets/icons/skills/css-icon.svg"
 import scssIcon from "../assets/icons/skills/scss-icon.svg"
+import tailwindIcon from "../assets/icons/skills/tailwind-icon.svg"
 import jsIcon from "../assets/icons/skills/js-icon.svg"
 import tsIcon from "../assets/icons/skills/ts-icon.svg"
 import reactIcon from "../assets/icons/skills/react-icon.svg"
+import nextIcon from "../assets/icons/skills/next-icon.svg"
 
 import nodeIcon from "../assets/icons/skills/node-icon.svg"
 import expressIcon from "../assets/icons/skills/express-icon.svg"
@@ -37,6 +39,12 @@ const skillsArr = [
     },
     {
         categ: "Front-end",
+        name: "Tailwind CSS",
+        pic: tailwindIcon,
+        desc: "Simplification maximale - Efficacité et rapidité de code - Ajout de classes globales",
+    },
+    {
+        categ: "Front-end",
         name: "JavaScript",
         pic: jsIcon,
         desc: "Librairies diverses - Création de modales - Modifications dynamiques du DOM - Écouteurs d'événement - Découpage en modules - Optimisation de fonctions - Débogage",
@@ -52,6 +60,12 @@ const skillsArr = [
         name: "React",
         pic: reactIcon,
         desc: "Découpage en composants réutilisables - Utilisation et création de Hooks - Routage en différentes pages - Passage de Props - Testing via Jest",
+    },
+    {
+        categ: "Front-end",
+        name: "Next.JS",
+        pic: nextIcon,
+        desc: "Routage dynamique - Optimisation des performances - Référencement SEO - Création d'API Rest",
     },
     {
         categ: "Back-end",
