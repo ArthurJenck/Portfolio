@@ -25,6 +25,9 @@ import spiralfolioMob from "../assets/images/projects-mobile/spiralfolio.webp"
 import festivalsDesk from "../assets/images/projects-desktop/festivals2023.webp"
 import festivalsSmol from "../assets/images/projects-smol/festivals2023.webp"
 import festivalsMob from "../assets/images/projects-mobile/festivals2023.webp"
+import odaceDesk from "../assets/images/projects-desktop/odace.webp"
+import odaceSmol from "../assets/images/projects-smol/odace.webp"
+import odaceMob from "../assets/images/projects-mobile/odace.webp"
 
 import { techsArr } from "./techs"
 
@@ -127,5 +130,16 @@ export const projectsArr = [
         desc: "Projet d'intégration réalisé dans le cadre de mes derniers partiels en 2ème année à l'ECV Paris. À partir d'un document PDF et de guides de style, le but était de reproduire fidèlement la landing page en tenant compte de la sémantique HTMl, de la stylisation Sass et la gestion du DOM.\nIntégration HTML & CSS • Implémentation Responsive • Stylisation en SCSS • Contrôle du DOM en JavaScript • Délais serrés – 4 heures",
         gitLink: "https://github.com/ArthurJenck/ECV_Festivals2023",
         webLink: "https://arthurjenck.github.io/ECV_Festivals2023/",
+    },
+    {
+        name: "Odace",
+        date: new Date("2025-02-13"),
+        picDesk: odaceDesk,
+        picSmol: odaceSmol,
+        picMobile: odaceMob,
+        techs: [techsArr[1], techsArr[2], techsArr[3]],
+        desc: "Dans le cadre du processus de recrutement chez Odace, j’ai développé en une journée une landing page dynamique affichant des formats vidéo issus de l’API d’Odace+. Le design, conçu sur Figma, s’inspire de l’identité visuelle de l’entreprise pour offrir une expérience fluide et immersive.\nSingle Page Application en React • Intégration d'API REST • Ajout de carrousel avec Glide.js • Animations au scroll via AOS • Conception UX/UI sur Figma • Réalisation en 24h sur 48h allouées",
+        gitLink: "https://github.com/ArthurJenck/Odace_LandingPage",
+        webLink: "https://odace.arthurjenck.com/",
     },
 ]
